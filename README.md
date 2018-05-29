@@ -7,7 +7,7 @@ Meine Notizen zu verschiedenen HSLU-Modulen.
 | Kürzel	| Modulname			| Status |
 |---------------|-------------------------------|---|
 | AD		| Algorithmen & Datenstrukturen	| Inexistent |
-| BWL |  | Inexistent |
+| BW | Betriebswirtschaft | Inexistent |
 | CNA | Computer- und Netzwerkarchitekturen | Inexistent |
 | CSA | C# in Action | Inexistent |
 | DBS | Datenbanksysteme | Inexistent |

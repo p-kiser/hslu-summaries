@@ -1,4 +1,4 @@
-# Zusammenfassungen HSLU
+# Zusammenfassungen
 
 Meine Notizen zu verschiedenen HSLU-Modulen und aus der Lehre.
 

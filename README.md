@@ -1,6 +1,6 @@
 # Zusammenfassungen HSLU
 
-Meine Notizen zu verschiedenen HSLU-Modulen.
+Meine Notizen zu verschiedenen HSLU-Modulen und aus der Lehre.
 
 ## HSLU-Module
 

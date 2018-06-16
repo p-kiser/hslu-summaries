@@ -155,10 +155,17 @@ KEYMAP setzen in `/etc/vconsole.conf`:
 echo KEYMAP=de_CH-latin1 > /etc/vconsole.conf
 ```
 
+Schriftart ändern
+
+```
+pacman -S terminus-font
+echo FONT=ter-v16n >> /etc/vconsole.conf
+```
+
 Hostname anpassen:
 
 ```
-echo thinkpad > /etc/hostname
+echo t420 > /etc/hostname
 ```
 
 hosts-File anpassen:
@@ -171,7 +178,7 @@ nano /etc/hosts
 #<ip-address>   <hostname.domain.org>   <hostname>
 127.0.0.1       localhost.localdomain   localhost
 ::1             localhost.localdomain   localhost
-127.0.1.1       toaster.localdomain     toaster
+127.0.1.1       t420.localdomain        t420
 ````
 
 ## Neuer Benutzer erstellen und Passwort setzen

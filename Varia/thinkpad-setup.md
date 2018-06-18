@@ -260,7 +260,7 @@ pacman -S xorg-server xf86-video-intel xorg-xinit xorg-xset xorg-xsetroot
 pacman -S alsa-tools alsa-utils
 ```
 
-Initialize `pacman` file name databaes:
+Initialize `pacman` file name database:
 
 ```
 pacman -Fy
@@ -270,14 +270,14 @@ pacman -Fy
 
 i3 Window Manager installieren:
 ```
-pacman -S i3
+pacman -S i3 dmenu rxvt-unicode
 ```
 
 i3 starten:
 
 ```
 echo "exec i3" >> ~/.xinitrc
-xstart
+startx  
 ```
 Keyboard layout anpassen i3:
 
@@ -289,22 +289,19 @@ echo "exec setxkbmap -rules xorg -model pc104 -layout ch -variant de" >>  ~/.con
 
 Kommentarzeichen entfernen bei `Color` in `/etc/pacman.conf`
 
-## Mehr Programme
-
-```
-sudo pacman -S git wget rxvt-unicode texlive-core texlive-bin
-```
-
 ## yay
 
 Yet another yogurt:
 
 ```
-cd /tmp
-git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -i && cd - && rm -rf yay-bin
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -i
+cd -
+rm -rf yay-bin
 ```
 
-#@ oh-my-zsh
+## oh-my-zsh
 
 ```
 sudo pacman -S zsh

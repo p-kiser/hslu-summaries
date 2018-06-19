@@ -20,7 +20,7 @@ Meine Notizen zu verschiedenen HSLU-Modulen und aus der Lehre.
 | MOD |  | Inexistent |
 | PLAB | Programmierlabor | Inexistent |
 | PMB | Projektmanagement Basics | Inexistent |
-| PMRE |  | Inexistent |
+| PMRE |  | SW02 |
 | VSK | Verteilte Systeme und Komponenten | Inexistent |
 | WEBTEC |  | Inexistent |
 | SCHWEIZERPOL	| Schweizer Politik	| Inexistent |

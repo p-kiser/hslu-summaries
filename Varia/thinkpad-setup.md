@@ -93,13 +93,9 @@ lsblk
 
 ## Base system installieren
 
-Reihenfolge in Mirrorlist anpassen:
+Reihenfolge in `/etc/pacman.d/mirrorlist` anpassen.
 
-```
-nano /etc/pacman.d/mirrorlist
-```
-
-Installieren:
+Base system installieren:
 
 ```
 pacstrap /mnt base base-devel
@@ -117,7 +113,7 @@ root system wechseln:
 arch-chroot /mnt
 ```
 
-## Konfigurationen anpassen
+## Konfiguration
 
 Sprache und Zeitzone auswählen:
 
@@ -181,7 +177,7 @@ nano /etc/hosts
 127.0.1.1       t420.localdomain        t420
 ````
 
-## Neuer Benutzer erstellen und Passwort setzen
+## Benutzer und Passwort
 
 Benutzer erstellen:
 
@@ -231,7 +227,7 @@ reboot
 
 Stick entfernen
 
-# Post install
+# Konfiguration
 
 ## WiFi
 
@@ -260,15 +256,10 @@ pacman -S xorg-server xf86-video-intel xorg-xinit xorg-xset xorg-xsetroot
 pacman -S alsa-tools alsa-utils
 ```
 
-Initialize `pacman` file name database:
-
-```
-pacman -Fy
-```
-
 ## i3wm
 
 i3 Window Manager installieren:
+
 ```
 pacman -S i3 dmenu rxvt-unicode
 ```
@@ -279,7 +270,7 @@ i3 starten:
 echo "exec i3" >> ~/.xinitrc
 startx  
 ```
-Keyboard layout anpassen i3:
+Keyboard layout setzen in i3:
 
 ```
 echo "exec setxkbmap -rules xorg -model pc104 -layout ch -variant de" >>  ~/.config/i3/config
@@ -291,12 +282,7 @@ Kommentarzeichen entfernen bei `Color` in `/etc/pacman.conf`
 
 ## Keybindings
 
-```
-sudo pacman -S xbindkeys
-xbindkeys -d > ~/.xbindkeysrc
-nano ~/.xbindkeysrc
-```
-File anpassen:
+`xbindkeys` und `slock` installieren, `~/.xbindkeysrc` erstellen und anpassen:
 
 ```
 # mute

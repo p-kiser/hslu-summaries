@@ -14,8 +14,6 @@ Grundziele IT-Security_
 
 Triple A (_Authentication, Authorization, Accounting)
 
-    TODO: Definitionen aus ZF-ISF integrieren
-
 ## Dimensionen von IT-Sicherheitsfragen
 
 * Rechtlich
@@ -69,7 +67,7 @@ Aufgaben und Trends in der Information Security:
 
 * Policies sind eine Sammlung von organisatorischen Richtlinen, die das Verhalten in einer Organisation vorgeben.
 
-* Bestimmen, was gemacht werden darf und was nicht
+* Bestimmen, **was** gemacht werden darf, andere Dokumente befassen sich eher mit dem **wie**
 
 * Damit sie effektiv sind müssen Policies _definiert_, _verstanden_, _anerkannt_ und _durchgesetzt_ werden
 
@@ -87,19 +85,29 @@ Die EISP beinhaltet einen Überblick über die Grundeinstellung der Unternehmung
 
 2. **IISP**: Issue-specific Information Security Policy
 
-Eine Richtlinie mit detaillierten Anweisungen für die Verwendung einer bestimmten Ressource oder Technologie.
-
-Beinhaltet Informationen zu der erwarteten Verwendung und der Kontrolle eines eingesetzten Systems.
+* Werden auch _fair and responsible use policy_ genannt
+* Eine Richtlinie mit detaillierten Anweisungen für die Verwendung einer bestimmten Ressource oder Technologie.
+* Beinhaltet Informationen zu der erwarteten Verwendung und der Kontrolle eines eingesetzten Systems.
 
 Beispiele: E-Mail, Whatsapp und andere Kommunikation; Verwendung des Internets; Persönliche Verwendung von Unternehmensgeräten; Zugangsberechtigungen; ... 
 
 3. **SISP**: System-specific policies
 
-Anweisungen zur Implementation und Konfiguration von Systemen, wie beispielsweise Zugriffsberechtigungen (ACLs, Firewall-Konfiguration)  
+Anweisungen des Managements zur Implementation und Konfiguration von Systemen, wie beispielsweise Zugriffsberechtigungen (ACLs, Firewall-Konfiguration).
+
+Werden definiert für Technologien, welche die CIA von Informationen betreffen und informieren über die Absichten des Managements
+
+* **Konfiguration** und **Zugriffsrechte** als Liste oder Matrix. Regeld das wer, was, wann, wo, wie
 
 ### **Erklären, was für eine erfolgreiche Policy notwendig ist:**
 
-    TODO
+Damit eine Policy effektiv sein kann muss sie:
+
+* definert
+* gelesen
+* verstanden
+* akzepiert
+* einheitlich durchgesetzt werden
 
 ### **Prozess der Entwicklung, Umsetzung und Unterhalt von _Information Security Policies_:**
 
@@ -130,6 +138,106 @@ Policies sind der Grundstein effektiver Informationssicherheit. Eine gute Policy
 
 * **Praktiken**: Beispiele von Handlungen, die Übereinstimmung mit den Policies demonstrieren
 
+## Effektive Polices
+
+Anforderungen für effektive Policies:
+
+1. Entwickelt mit Instriestandard / akzeptierten Praktiken und vom Management abgesegnet
+2. Verteilt und bekanntgemacht werden mit allen angemessenen Mitteln
+3. Von allen Angestellten gelesen
+4. Formelles Einverständnis der Angestellten
+5. Einheitlich angewendet und durchgesetzt werden.
+
+### Entwicklung
+
+Policy-Development wird oft als Prozess mit drei Schritten betrachtet:
+
+1. **Designen und Schreiben** (oder Umschreiben) einer Policy
+2. **Review** durch einen Chef / Senior Manager und formale Absegnung
+3. Managementprozesse zur **Festlegung und Umsetzung**
+
+Der erste Schritt benötigt gutes _Projektmanagement_, die anderen zwei gute _Business Practices_.
+
+### Verteilung
+
+Erfolg _physisch_ oder _elektronisch_. Die Verteilung der Policy ist wichtig, da sie nicht durchgesetzt werden kann, wenn nicht nachgewiesen ist, das diese dem Endbenutzer bekannt war. Vertrauliche Policies erfordern besondere Massnahmen wie besondere Kennzeichnung, Zerstörung von Vorgängerversionen und so weiter.
+
+### Lesen
+
+* Sprachkenntnisse und Analphabeten berücksichtigen
+* Sehbehindertenfreundliche Versionen
+* Übersetzungen
+
+Eventuell prüfen mit Tools und Test (Flesch Reading Ease Tests). Leseniveau eines Oberstufenschülers ist das Maximum.
+
+### Verstehen
+
+* Sinnvolles Sprachniveau (siehe oben), minimale Verwendung technischer Fachbegriffe und _Manager Slang_
+* Assessments durchführen, um das Verständnis zu prüfen über das grundlegende Ziel der Policy
+* Mittels Tests den Schulungsbedarf einzelner Mitarbeiter ermitteln
+
+### Policy Compliance
+
+Muss entweder **Agreed by confimation**sein oder **Agreed by act**: Eine Handlung ist erforderlich, mit der das Verständnis einer Policy bestätigt wird bevor eine Technologie oder Ressource verwendet werden kann.
+
+Das Verweigern des Einverständnisses wird als Arbeitsverweigerung ausgelegt und ist somit **Grund zur Terminierung**.
+
+### Durchsetzung
+
+Die Durchsetzung von Policies muss einheitlich und unparteiisch erfolgen und auch externer Überprüfung standhalten. Strafen und andere Massnahmen, die aus Missachtungen resultieren müssen diesen auf diese Aspekte überprüft werden können.
+
+## Automatisierung mit Tools
+
+Es exisieren Tools zur Hilfe bei der Entwicklung, Implementation und Unterhalt von Policies, beispielsweise zur sicheren, passwörtgeschützen Bereitstellung oder zur Überwachung, welche Mitarbeiter die Policies gelesen und akzeptiert haben.
+
+Beispielsweise _VigilEnt Policy Center_ (VPC) Server, welche Dokumente, Quizzes und Informationen zur Verfügung stellen.
+
+## SecSDLC
+
+Wie bei anderen Projekten ist auch bei der Policy Entwicklung eine rigorose Planung wichtig. Eine Möglichkeit, dies zu erreichen ist die Verwendung eines _System Development Life Cycles_ (SDLC). Dies definiert sechs Phasen:
+
+1. **Investigation Phase**: Unterstützung von Management, IT-Management sicherstellen, Ziele defineren, Beteiligte und Betroffene ermitteln und einbeziehen, Scope und Kosten festlegen
+2. **Analysis Phase**: Ein aktuelles Risikoassessment oder ein Audit, welches die aktuellen InfoSec-Bedürfnisse der Organisation dokumentiert, wichtiges Referenzmaterial sammeln (beispielsweise bestehende Policies)
+3. **Design Phase**: Dokumententwurf erstellen, Reviews und Anpassungen bis _Manager Approval &trade;_
+4. **Implementation Phase**: Plan zur Verteilung und der Überprüfung der Verteilung erstellen, Bestätigungen einholen (z.B. Unterschrift und Datum)
+5. **End User License Agreement**
+6. **Maintenance Phase**: Überwachung, Aufrechterhaltung und Anpassungen der Polices, Mechanismen zum Melden von Problemen (idealerweise anonym), periodische Reviews
+
+## Policy Administator
+
+Policies brauchen einen _Champion_und einen und Manager. Werden diese beiden Positionen kombiniert, nennt man das Ergebnis **Policy Administrator**. Dieser ist Verantwortlich für die Erstellung, Revision, Verteilung und Aufbewahrung der Policy.
+# Review Schedule, Procedures & Practices
+
+### Schedule
+
+Periodische Überwachung zur Sicherstellung der Effektivität. Folgende Punkte sollten geprüft werden:
+
+* Aktualität
+* Genauigkeit
+* Vollständigkeit
+
+Diese Reviews sollten im vornherein festgelegt werden und mindestens ein mal jährlich durchgeführt werden.
+
+### Prozeduren und Praktiken
+
+Der **Policy Administrator &copy;** sollte dafür sorgen, das einfach Rückmeldungen gemacht werden können mittels Mail und anonymer _drop box_. Diese Rückmeldungen sollten idealerweise auch gelsen werden.
+
+Eine Policy sollte immer ein Veröffentlichungsdatum und die Daten der Revisionen enthalten, um Unklarheiten bezüglich Aktualität und Gültigkeit zu vermeiden. Je nach Inhalt ist es auch sinnvoll, das Ende der Gültigkeit festzuhalten, sofern dies vorhersehbar ist (_sunset clause_).
+
+## Conclusions Security Policy
+
+Policies dienen hauptsächlich dazu, Angestellte zu informieren, welches Verhalten akzeptabel ist und welches nicht. Die _meisten_ Angestellten wollen sich korrekt verhalten. Deshalb sich Informationen und Schulung das effektivste Mittel zur Sicherstellung der Policies.
+
+* InfoSec beginnt und endet mit Policies
+* Policies sind ein Management-Problem, die technischen Aspekte kommen erst nach der Festlegung der Policies
+* Policies sind die günstigste, aber die Massnahme die am schwierigsten zu implementieren ist.
+* Policies dürfen nicht mit dem Gesetz in Konflikt stehen und müssen vor Gericht _verheben_, falls angefechtet.
+* Endbenutzer sollten in die Erstellung einbezogen werden.
+* Sollten beschreiben was gemacht werden muss, nicht gemacht werden darf und was die Konsequenzen bei Fehlverhalten sind.
+* Policies müssen **geschrieben, verteilt, gelesen, verstanden, zugestimmt UND durchgesetzt** werden 
+* Drei Arten: Enterprise InfoSec Policy, Issue-Specific Policy, System-specific Policy
+
+# Human Factor
 
 
 

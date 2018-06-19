@@ -231,7 +231,7 @@ reboot
 
 Stick entfernen
 
-# Konfiguration
+# Post install
 
 ## WiFi
 
@@ -289,6 +289,37 @@ echo "exec setxkbmap -rules xorg -model pc104 -layout ch -variant de" >>  ~/.con
 
 Kommentarzeichen entfernen bei `Color` in `/etc/pacman.conf`
 
+## Keybindings
+
+```
+sudo pacman -S xbindkeys
+xbindkeys -d > ~/.xbindkeysrc
+nano ~/.xbindkeysrc
+```
+File anpassen:
+
+```
+# mute
+"amixer set Master toggle"
+  XF86AudioMute
+
+# lower volume
+"amixer set Master 5%-"
+  XF86AudioLowerVolume
+
+# raise volume
+"amixer set Master 5%+"
+  XF86AudioRaiseVolume
+```
+
+Konfig neu laden:
+
+```
+xbindkeys -p
+```
+
+# Programme
+
 ## yay
 
 Yet another yogurt:
@@ -313,7 +344,7 @@ change ZSH_THEME to `geoffgarside` in `~/.zshrc`
 
 ## Docker
 
-Installeren:
+Installieren:
 
 ```
 pacman -S docker

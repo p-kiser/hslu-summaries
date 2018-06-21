@@ -257,7 +257,7 @@ COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibt
 * Unternehmensanforderungen an Datenmanagement
 * Speicherungs- und Aufbewahrungsvorkehrungen
 * Entsorgung
-* Bakckup und Wiederherstellung
+* BaCKkup und Wiederherstellung
 * ...
 
 ### Definitionen
@@ -282,8 +282,6 @@ Die 10 Schlüsseldokumente eines Projektzyklus:
 ![Schlüsseldokumente Projektzyklus](./img/keydocs.png)
 
 Der Projektverlauf wird von vielen Einflüssen geprägt: _Systemsicherheit, Risikobeurteilung, Normen und Standards, Strategiedefinition, Konfigurationsmanagement, Betriebsmanagement, Change Management usw. usf._
-
-
 
 # Human Factor
 

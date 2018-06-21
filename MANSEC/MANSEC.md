@@ -260,7 +260,7 @@ COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibt
 * BaCKkup und Wiederherstellung
 * ...
 
-### Definitionen
+## Definitionen
 
 > **Kontrollen (Definition)**
 > Der Begriff Kontrollen (_controls_) ist definiert als die Konzepte, Verfahren, Praktiken und Organisationsstrukturen, welche eine angemessene Gewissheit verschaffen, dass die Geschäftsziele erreicht und dass unerwünschte Ereignisse verhindert oder erkannt und korrigiert werden.
@@ -268,12 +268,12 @@ COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibt
 > **Kontrollziel (Definition)**
 > Ein _Kontrollziel (_control objective_) ist eine Aussage zum gewünschten Resultat (Zweck), das mit der Implementierung von Kontroll(verfahr)en in einer bestimmten Aktivität erreicht werden soll.
 
-### Projektzyklus
+## Projektzyklus
 
 Die wichtigsten Ziele, die erreicht werden sollten:
 
 * **Effektivität / Effizienz**: Zielerreichung, Ressourcenverwendung
-* **Einhaltung**: Gesetze, Verträge, Reglementationen
+* **Einhaltung**: Gesetze, Verträge, Reglemente
 * **CIA**: Sicherstellung
 * **Zuverlässigkeit**: Bereitstellung zuverlässiger Informationen
 
@@ -282,6 +282,35 @@ Die 10 Schlüsseldokumente eines Projektzyklus:
 ![Schlüsseldokumente Projektzyklus](./img/keydocs.png)
 
 Der Projektverlauf wird von vielen Einflüssen geprägt: _Systemsicherheit, Risikobeurteilung, Normen und Standards, Strategiedefinition, Konfigurationsmanagement, Betriebsmanagement, Change Management usw. usf._
+
+## Genereller Ablauf eines IS-Audits
+
+Um IS-Audits machen zu können braucht man folgendes:
+
+- die Sicherstellung des Management-Supports, 
+- die Festlegung der verwendeten Standards und 
+- die Definition der Ziele und des Umfangs
+- eine Geheimhaltungserklärung
+- Sicherstellung des Budgets / Vertrags
+
+Wenn man das alles hat, kann ein Audit geplant werden:
+
+- Zielbereiche
+- Personal
+- Ablauf / Zeitplan
+- Kickoff-Meeting
+- Notwendige Hilfsmittel
+- Zugriffsberechtigungen
+- Interne Absprachen
+- Kaffeepause
+- Interview-Listen
+- Sammlung von Evidents
+- Auswertung von Informationen
+- Vorschläge zur Verbesserung
+- Periodische Risikoanalyse
+- Regelmässiges Reporting
+- Supervision
+- Endbericht / Präsentation
 
 # Human Factor
 
@@ -353,4 +382,106 @@ Elemente der Dokumentation:
 * Sicherheitsprojekte definieren
 
 Die Dokumentation sollte sich an Frameworks und Normen orientieren wie ISO 2700x, CObIT etc.
+
+# Risikomanagement und ISMS
+
+## Lernziele
+
+**Sie wissen, was unter Risiko, Risiko-Management und Risiko-Prozess verstanden wird und welche Ziele
+damit verfolgt werden**
+
+> * Risiko = Potentieller Schaden
+> * Risikomanagement = Umgang mit Risiken
+> * Risiko-Prozess = R-Identifikation, R-Analyse, R-Bewertung, R-Behandlung, begleitende Aufgaben (Kommunikation, Kontrolle etc.)
+
+**Sie erkennen den Zusammenhang von Governance, 
+Risk und Compliance**
+
+> TODO
+
+**Sie kennen wichtige GRC Organisationen, Standards 
+und Frameworks**
+
+> * ISO 27001: ISMS (Information Security Management Systems)
+> * BSI-STandards
+
+##Risikomanagementprozess
+
+1.  Risikoidentifikation: _Assets (Schutzobjekte) festlegen, Abhängigkeiten definieren_
+2. Risikoanalyse: _Existierende Massnahmen, Bedrohungen, Auswirkungen usw. tabellarisch erfassen in einem Riksikokatalog_
+3. Risikobewertung: _Risikokatalog ergänzen mit Risiko-Bewertungen_
+4. Risiko-Behandlung:  _Risikokatalog ergänzen mit Massnahmen (Priorisierung, Termin, Budget, Status, Verantwortung_
+
+# Disaster Recovery Planning & Data Backup Strategies
+
+## Disaster Recovery Plan
+
+ein DR-Plan besteht aus Richtlinien und Verfahren, die beschreiben was zu tun ist, wenn die IT-Services gestört sind, beispielsweise aufgrund von Naturkatastrophen, Sabotage oder _Cybercrime_.
+
+Ziel ist es, die Geschäftsprozesse so schnell wie möglich wiederherzustellen durch erneute Inbetriebnahme der Systeme oder durch Ausweichen auf ein Notsystem.
+
+Das **Business Continuity Management (BCM)** beschreibt Prozesse, welche das Weiterlaufen essentieller Geschäftsfunktionen nach einem Notfall  und die schnelle Rückkehr zum Normalbetrieb sicherstellen. **DRP** sind Teil des BCM: technisch orientierte Dokumente, die es erlauben, verschiedene Systeme möglichst schnell wieder zum ordnungsgemässen Betrieb zu bringen.
+
+Ein DRP umfasst folgende Aspekte:
+
+* IT-Services: Welche Prozesse benötigen werlche Systeme?
+* Akteure: Wer muss was machen beim Disaster Recovery Prozess?
+* Lieferanten: Wer muss kontaktiert werden?
+* Orte: Wo sind die Ersatzarbeitsplätze?
+* Training: Welche Schulungen und Dokumentation stehen zur Verfügung?
+
+## KPIs von DRPs
+
+* **Recovery Point Objective (RPO)**: Zeitraum zwischen zwei Datensicherungen
+* **Recovery Time Objective (RTO)**: Die maximale Zeitdauer zwischen Wiederherstellung und Normalbetrieb
+
+## DR-Plan erstellen
+
+* Einführung: Zusammenfassung der Ziele, abgedeckte Services, RTOs & RPOs
+* Rollen und Verantwortlichkeiten
+* Ereignisreaktion: Wann sollte der Plan ausgelöst werden, wer soll informiert werden
+* DR-Prozesse: Welche Akteure starten welche Prozesse
+* Anhänge: Listen, Formulare, relevante Dokumente
+
+## DR-Plan leben
+
+* Schulungen
+* Verantwortlichkeiten vergeben
+* Überprüfen
+* Teilweise und dann auch komplett testen
+
+# Data Backup
+
+Daten sind auch für kleine Unternehmen oder Privatpersonen ein wichtiges Asset und deshalb schützenswert. Ein sinnvolles Backup sollte geplant werden:
+
+1. Kritische Datensysteme identifizeren
+2. Abhängigkeiten identifizieren
+3. RTO und RPO festlegen
+4. Benötigte Kapazitäten ermitteln
+5. Ort für Offsite Storage festlegen
+
+Backups gibts in verschiedenen _Flavors_:
+
+* Full: Wiederherstellung simpel, braucht viel Speicher
+* Full + Incremental: Wiederherstellung komplizierter, weniger Speicher
+* Full + Differential: Öppis dazwischen
+* Virtualisierung + Snapshots
+* Continuous Data Protection: Änderungen loggen mittels dedizierter Hardware
+* Replication: Duplikaton des System: Braucht viel Bandbreite
+
+Die Aufbewahrungszeit und das Speichervolumen bestimmen, welches Speichermedium verwendet wird:
+
+* Band
+* CD / DVD
+* Offsite / Internetbasiert
+* Hybrid-Lösungen
+
+Bei der Implementierung sollte folgendes beachtet werden:
+
+* Überlast, Fehler, fehlende Daten
+* Bandbreite, Kapazität
+* Auswirkung auf Systemleistung
+* Testen
+* Strategie regelmässig prüfen / anpassen
+* Dokumentation
 

@@ -239,6 +239,52 @@ Policies dienen hauptsächlich dazu, Angestellte zu informieren, welches Verhalt
 * Policies müssen **geschrieben, verteilt, gelesen, verstanden, zugestimmt UND durchgesetzt** werden 
 * Drei Arten: Enterprise InfoSec Policy, Issue-Specific Policy, System-specific Policy
 
+# Audits
+
+## Begriffe
+
+* **Audit**: Untersucht, ob Prozesse, Anforderungen und Richtlinien die geforderten Standards erfüllen, oftmals im Rahmen eines Qualitätsmanagements. Audits werden von dem speziell hierfür geschulten _Auditor_ durchgeführt. 
+
+* **Enterprise Governance**: Unternehmensführung & -lenkung, ein Set von Verantwortungen und Massnahmen des Managements zur Festlegung der _strategischen Ausrichtung_, Sicherstellung der _Zielerreichung_, _Risikomanagement_ und _Ressourcenverwaltung_.
+
+## COBIT
+
+COBIT (COntrol Objectives for Information and Related Technologies) ist ein _good-practice_ Framework der [ISACA](https://en.wikipedia.org/wiki/ISACA) für IT Management und IT Governance. Darin werden _Steuerungsziele_ basieren auf Unternehmenszielen festgelegt. Es wird vor allem das _was_ geregelt, und nicht vorrangig das _wie_.
+
+COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibts 318 detaillierte _Control Objectives_. Beipiele for _Detail Controls_:
+
+**DS11 Manage Daten**
+* Unternehmensanforderungen an Datenmanagement
+* Speicherungs- und Aufbewahrungsvorkehrungen
+* Entsorgung
+* Bakckup und Wiederherstellung
+* ...
+
+### Definitionen
+
+> **Kontrollen (Definition)**
+> Der Begriff Kontrollen (_controls_) ist definiert als die Konzepte, Verfahren, Praktiken und Organisationsstrukturen, welche eine angemessene Gewissheit verschaffen, dass die Geschäftsziele erreicht und dass unerwünschte Ereignisse verhindert oder erkannt und korrigiert werden.
+
+> **Kontrollziel (Definition)**
+> Ein _Kontrollziel (_control objective_) ist eine Aussage zum gewünschten Resultat (Zweck), das mit der Implementierung von Kontroll(verfahr)en in einer bestimmten Aktivität erreicht werden soll.
+
+### Projektzyklus
+
+Die wichtigsten Ziele, die erreicht werden sollten:
+
+* **Effektivität / Effizienz**: Zielerreichung, Ressourcenverwendung
+* **Einhaltung**: Gesetze, Verträge, Reglementationen
+* **CIA**: Sicherstellung
+* **Zuverlässigkeit**: Bereitstellung zuverlässiger Informationen
+
+Die 10 Schlüsseldokumente eines Projektzyklus:
+
+![Schlüsseldokumente Projektzyklus](./img/keydocs.png)
+
+Der Projektverlauf wird von vielen Einflüssen geprägt: _Systemsicherheit, Risikobeurteilung, Normen und Standards, Strategiedefinition, Konfigurationsmanagement, Betriebsmanagement, Change Management usw. usf._
+
+
+
 # Human Factor
 
 W5: https://elearning.hslu.ch/ilias/goto.php?target=file_3675384_download&client_id=hslu

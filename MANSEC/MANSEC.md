@@ -8,7 +8,7 @@ Geschrieben von mir, in InfoSec-Denglisch.
 
 ## CIA
 
-Grundziele IT-Security_
+Grundziele IT-Security:
 
 * **Confidentiality**: Vertraulichkeit
 * **Integrity**: Integrität
@@ -30,7 +30,7 @@ Triple A (_Authentication, Authorization, Accounting)
 Ziele und Aufgaben des Managements:
 
 * **POSDC** (Traditionell): _planning, **organizing**, staffing, directing, controlling_
-* **POLC** (Wichtig für CISO): _ planning, organizing, **leading**, controlling_
+* **POLC** (Wichtig für CISO): _planning, organizing, **leading**, controlling_
 
 Die Planung erfolgt auf _strategischer_, _taktischer_ und _operativer_ Ebene.
 
@@ -182,7 +182,7 @@ Eventuell prüfen mit Tools und Test (Flesch Reading Ease Tests). Leseniveau ein
 
 ### Policy Compliance
 
-Muss entweder **Agreed by confimation**sein oder **Agreed by act**: Eine Handlung ist erforderlich, mit der das Verständnis einer Policy bestätigt wird bevor eine Technologie oder Ressource verwendet werden kann.
+Muss entweder **Agreed by confirmation**sein oder **Agreed by act**: Eine Handlung ist erforderlich, mit der das Verständnis einer Policy bestätigt wird bevor eine Technologie oder Ressource verwendet werden kann.
 
 Das Verweigern des Einverständnisses wird als Arbeitsverweigerung ausgelegt und ist somit **Grund zur Terminierung**.
 
@@ -251,7 +251,7 @@ Policies dienen hauptsächlich dazu, Angestellte zu informieren, welches Verhalt
 
 ## COBIT
 
-COBIT (COntrol Objectives for Information and Related Technologies) ist ein _good-practice_ Framework der [ISACA](https://en.wikipedia.org/wiki/ISACA) für IT Management und IT Governance. Darin werden _Steuerungsziele_ basieren auf Unternehmenszielen festgelegt. Es wird vor allem das _was_ geregelt, und nicht vorrangig das _wie_.
+COBIT (Control Objectives for Information and Related Technologies) ist ein _good-practice_ Framework der [ISACA](https://en.wikipedia.org/wiki/ISACA) für IT Management und IT Governance. Darin werden _Steuerungsziele_ basieren auf Unternehmenszielen festgelegt. Es wird vor allem das _was_ geregelt, und nicht vorrangig das _wie_.
 
 COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibts 318 detaillierte _Control Objectives_. Beipiele for _Detail Controls_:
 
@@ -259,7 +259,7 @@ COBIT hat 34 kritische Prozesse definiert und in 4 Domains eingeteilt. Dazu gibt
 * Unternehmensanforderungen an Datenmanagement
 * Speicherungs- und Aufbewahrungsvorkehrungen
 * Entsorgung
-* BaCKkup und Wiederherstellung
+* Backup und Wiederherstellung
 * ...
 
 ## Definitionen
@@ -405,7 +405,7 @@ Risk und Compliance**
 und Frameworks**
 
 > * ISO 27001: ISMS (Information Security Management Systems)
-> * BSI-STandards
+> * BSI-Standards
 
 ##Risikomanagementprozess
 
@@ -456,7 +456,7 @@ Ein DRP umfasst folgende Aspekte:
 
 Daten sind auch für kleine Unternehmen oder Privatpersonen ein wichtiges Asset und deshalb schützenswert. Ein sinnvolles Backup sollte geplant werden:
 
-1. Kritische Datensysteme identifizeren
+1. Kritische Datensysteme identifizieren
 2. Abhängigkeiten identifizieren
 3. RTO und RPO festlegen
 4. Benötigte Kapazitäten ermitteln
@@ -539,7 +539,7 @@ Schutzmöglichkeiten:
 
 ## Erkennungs- und Ortungstechniken
 
-Lokationsdaten mit Zeitangaben reichen aus, um 95% aller Individuen zu identifizeren.
+Lokationsdaten mit Zeitangaben reichen aus, um 95% aller Individuen zu identifizieren.
 
 * Access Point vom Internet Service Provider
 * WLAN
@@ -641,7 +641,6 @@ Oft übersehen: Testdaten sind meist eine direkte Kopie der Produktivumgebung un
 * Daten nicht verfälschen: Generalisierung durch Zusammenfassen in Wertebereiche (Alter: 20-29)
 * Unterdrückung: Daten(sätze) entfernen
 
-
 Anonymisierte Daten fallen (in Europa (mit Ausnahmen)) nicht mehr in den _scope of data protection legislation_.
 
 ### Bewertung der Attribute
@@ -656,7 +655,7 @@ _k_ Datensätze bilden eine Äquivalenzklasse bezüglich eines Quasi-Identifikat
 
 In einer _k-anonymous_ Tabelle ist jedes Tupel vom mindestens k-1 anderen Tupeln nicht unterscheidbar (ausser in den sensitiven Attributen).
 
-* Das Ziel des ganzen ist nicht der direkte Schutz von _seniblen_ Daten, sonder von _charakteristischen_ Daten
+* Das Ziel des ganzen ist nicht der direkte Schutz von _sensiblen_ Daten, sonder von _charakteristischen_ Daten
 
 Das ganze kann versagen, wenn die sensitiven Werte zu wenig Vielfalt haben, oder wenn der Angreifer Hintergrundwissen hat.
 

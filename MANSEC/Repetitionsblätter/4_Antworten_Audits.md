@@ -2,7 +2,11 @@
 
 **1) IS-Audits können auf der Basis von verschiedenen Standards / Frameworks gemacht werden. Was bedeuten die folgenden Abkürzungen und wo ist der Einsatz dieser Standards / Frameworks v.a. sinnvoll? InfoSurance, GSHB, Cobit, PCI-DSS**
 
-> TODO
+> * **InfoSurance**: Verein mit 10-Punkte-Programm für wirkungsvollen IT-Schutz in KMU. (_simpel, sehr kleine Firmen)
+> * **GSHB**: Grundschutzhandbuch, IT-Grundschutz-Katalog
+> * **BSI**: Bundesamt für Informationssicherheit (IT-Grundschutz Standards)
+> * **COBIT**: Control Objectives for Information and Related Technologies: good practice framework von ISACA (Auditoren)
+> * **PCI-DSS**: Payment Card Industry Data Security Standard (Regelwerk für Zahlungsverkehr)
 
 **2) Welche Organisation in der Schweiz ist Vorreiterin in der Ausbildung von IT-Auditorinnen und Autoren, und welche 2 Zertifikate werden am häufigsten via Prüfung erlangt?**
 

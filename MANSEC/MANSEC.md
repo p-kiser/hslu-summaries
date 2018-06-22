@@ -1,6 +1,8 @@
 # Information Security Management
 
-Eine kleine Zusammenfassung der HSLU.I Vorlesung _Managementaspekte der Information Security_ (MANSEC), basierend auf den Folien von _Prof. Dr. Bernhard M. Hämmerli Security Experte_.
+Eine kleine Zusammenfassung der HSLU.I Vorlesung _Managementaspekte der Information Security_ (MANSEC), basierend auf den Folien von _Prof. Dr. Bernhard M. Hämmerli Security Experte_ and friends.
+
+Geschrieben von mir, in InfoSec-Denglisch.
 
 # Einführung
 
@@ -484,4 +486,179 @@ Bei der Implementierung sollte folgendes beachtet werden:
 * Testen
 * Strategie regelmässig prüfen / anpassen
 * Dokumentation
+
+# Datenschutz
+
+## Persönliche Daten
+
+Als **persönliche Daten** bezeichnet man _alle_ Informationen, die eindeutig einer bestimmten Person zugewiesen werden können (direkt und indirekt via Identifikationsnummer). Insbesondere umfasst dies Angaben zu physischen, mentalen, sozialen, ökonomischen und kulturellen Merkmalen.
+
+Dazu gehören beispielsweise:
+
+* Sozialversicherungsnummer, Kontonummer, Führerschein
+* Alter, Geschlecht, Grösse, Gewicht, Kleidergrösse
+* Religionszugehörigkeit, Parteimitgliedschaft
+* Geburtsdatum, Name, Wohnort
+* Location data, Stromverbrauch
+
+> Personal data is the new oil of the internet
+
+-- <cite>Scrooge McDuck</cite>
+
+### Kategorisierung von Kunden
+
+Basierend auf den erhobenen Daten werden Kunden in Kategorien eingeteilt. Facebook beispielsweise ermittelt Zielgruppen anhand von 98 Datenpunken wie Ort, Sprache, Bildung, Einkommen, Beziehungsstatus, Automarke etc.
+
+Solche Kategorien heissen dann beispielsweise _Elite Suburbs_, _Working Town_ oder _Avec-Kunden_.
+
+## Tracking und Targeting
+
+Targeting (im Sinne von targeted advertising) geschieht mit verschiedenen Techniken:
+
+* Browser- und Providerinformationen
+* Os, Bildschirmauflösung und Bandbreite
+* Geo-Targeting, GPS, IP-Adresse
+* Cookies, Flash cookies, count pixels
+* URL-Parameter
+* JavaScript
+* Social Media Plugins, z.B. Facebook Like Button
+
+Als **fingerprinting** bezeichnet man die Identifizierung eines Benutzer anhand einer Kombination aus vielen Merkmalen, die zusammen eine eindeutige Identifikation ermöglichen.
+
+Bsp: Treiberversionen + Systemschriftarten + installierte Browser-Plugins + Bildschirmauflösung + viele weitere Faktoren ermöglichen eine eindeutige Identifikation
+
+## Smartphones
+
+Inhalte werden vermehrt über Apps abgerufen. Diese verwenden kein HTTP, sondern eigene Kommunikationskanäle und haben oft Zugriff auf sehr viele persönliche Informationen wie Kontakte, Kalender, Lokation usw. 
+
+Schutzmöglichkeiten:
+
+* vertrauenswürdiger App-Marks
+* Kontrolle / Analyse von unabhängigen Parteien
+* Apps mit integrierten Sicherheitsmechanismen
+
+## Erkennungs- und Ortungstechniken
+
+Lokationsdaten mit Zeitangaben reichen aus, um 95% aller Individuen zu identifizeren.
+
+* Access Point vom Internet Service Provider
+* WLAN
+* Mobile Radio
+* GPS
+* Kreditkarte
+* Kameras
+* ...
+* 
+
+Einfache Personenzähler und Gesichtserkennungssoftware sind weitere Arten Personendaten zu erfassen. _Computer Vision_ kann beispielsweise das Geschlecht, Alter, Gemütszustand, aber auch Tracking durch Erkennen von _Landmarks_ ermöglichen.
+
+Massnahmen, um die Gesichtserkennung zu erschweren sind:
+
+* Das Gesicht modifizieren (beispielsweise mit Farbe -> _CV Dazzle_)
+* Anti-Photo-Massnahmen (_Camoflash_, Sensoren die bei für Autofokus typischen Infrarot-Signalen ein zu leuchten beginnen, um den Kontrast zu verhunzten).
+* _Privacy Visor_ - Brillen, die near-infrared Signale transmitten.
+* Bildmanipulation mit _Photoshop&copy;_. Other brands are available.
+
+## Zusammenfassung
+
+Es gibt viel verschiedene Arten, Waren und Menschen zu _tracken_. Gesichtserkennung wird wichtiger, es werden vermehrt Personen überwacht.
+
+# Privacy
+
+Der **Code of Fair Information Practices (1973)** sagt, es braucht:
+
+* Benachrichtigung / Awareness bezüglich Datenerhebung
+* Consent (opt-in vs. opt-out)
+* Security
+* Enforcement (Regeln, Gesetze)
+
+Die **OECD** sagt, man muss folgendes definieren:
+
+* Collection Limitation
+* Data Quality
+* Purpose Specification
+* Use Limitation
+* Security Safeguard
+* Openness
+* Individual Participation
+
+
+## Purpose
+
+Die Absichten hinter der Datenerhebung sollten ersichtlich sein.
+
+## Consent
+
+Das _Data Subject_ muss (freiwillig) eine Einwilligung geben, oder anderweitig erkennbar man das _es_ sein Einverständnis gibt, die Daten zu erheben und auszuwerten. Dies kann irgendeine Form haben, muss aber eine positive Aktion (?) sein und das _Data Subject_ sollte verstehen, zu was es da zustimmt.
+
+## Datenschutzrichtlinien
+
+Datenschutzrichtlinien (_Privacy Policies_) informieren den Benutzer über die Datenschutz-Praktiken einer Website, damit diese entscheiden können ob sie das akzeptieren, ob sie opt-ins & opt-outs machen wollen usw.
+
+Das ist zwar gut und richtig, in der Realität sind diese aber oft mangelhaft umgesetzt:
+
+* schwer zu finden
+* schwer zu verstehen
+* zu lang
+* werden geändert ohne zu informieren
+
+Datenschutzrichtlinien sollten folgende Komponenten enthalten:
+
+* Identifikation von Seite, Umfang, Kontaktinformationen
+* Zugriffsinformationen
+* Sicherheitsbestimmungen
+* Erhobene Daten inkl. Cookies
+* Verwendungszweck
+* Datenaufbewahrungszeiten
+* Verwendung und Weitergabe der Daten
+* Infos zu opt-in/opt-out
+
+Das sind zwar viele Infos, es sollte aber trotzdem kurz und einfach zu lesen sein.
+
+## Datenschutz-Managementsysteme
+
+Regeln und Verfahren für Organisationen, um Datenschutz (Gesetze EU, Bund, Kantone, Verträge und Standards) mit Prozessen zu erfüllen.
+
+Planung, Entwicklung, Anwendung, Kontrolle und Verbesserung von organisatorischen und technischen Massnahmen und die Ermittlung des aktuellen Datenschutz-Niveaus.
+
+Beschreibt was (nicht _wie_) zu tun ist, um Informationssicherheit (CIA, Nachvollziehbarkeit...) und Privatsphärenschutz (Erkennbarkeit, Einwilligung, Anonymisierung...) sicherzustellen.
+
+### Die sechs Fragen des Datenschutzes
+
+* Welche personenbezogenen Daten verarbeiten wir?
+* Warum verarbeiten wir personenbezogene Daten?
+* Wann können wir die personenbezogenen Daten vernichten?
+* Wer wird Zugang haben und rechenschaftspflichtig sein?
+* Wo werden wir die persönlichen Daten verarbeiten und speichern?
+* Werden wir eine legitime Grundlage für die Verarbeitung haben?
+
+## Anonymisierung
+
+Oft übersehen: Testdaten sind meist eine direkte Kopie der Produktivumgebung und müssen deshalb gleich geschützt werden. Bei Auslagerung von Tests müssen also Vorkehrungen getroffen werden.
+
+* Maskierung sensitiver und nicht-sensitiver Daten, wenn mit ihnen sensitive Daten wiedergestellt werden können
+* Daten verfälschen, Rauschen hinzufügen aber Aggregatstatistik erhalten.
+* Daten nicht verfälschen: Generalisierung durch Zusammenfassen in Wertebereiche (Alter: 20-29)
+* Unterdrückung: Daten(sätze) entfernen
+
+
+Anonymisierte Daten fallen (in Europa (mit Ausnahmen)) nicht mehr in den _scope of data protection legislation_.
+
+### Bewertung der Attribute
+
+* **Identifikator**: Attribut, das eine Person eindeutig bestimmt
+* **Quasi-Identifikator**: Untermenge der Attribute, deren Kombination eine Person bestimmbar machen könnte
+* **Sensitive Attribute**: Attribute, die nicht mit einer Person verknüpfbar sein sollten.
+
+## _k_-anonymity
+
+_k_ Datensätze bilden eine Äquivalenzklasse bezüglich eines Quasi-Identifikators. Das führt zu einem Schutz mit Konfidenz 1/_k_ vor einer korrekten Verknüpfung einer Person mit ihren sensitiven Attribut.
+
+In einer _k-anonymous_ Tabelle ist jedes Tupel vom mindestens k-1 anderen Tupeln nicht unterscheidbar (ausser in den sensitiven Attributen).
+
+* Das Ziel des ganzen ist nicht der direkte Schutz von _seniblen_ Daten, sonder von _charakteristischen_ Daten
+
+Das ganze kann versagen, wenn die sensitiven Werte zu wenig Vielfalt haben, oder wenn der Angreifer Hintergrundwissen hat.
+
+
 

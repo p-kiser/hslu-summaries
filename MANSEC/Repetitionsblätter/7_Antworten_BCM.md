@@ -2,7 +2,7 @@
 
 **1) Welche Ziele verfolgt Business Continuity Management?**
 
-> TODO
+> Effektive Reaktion auf Bedrohungen Wie Naturkatastrophen oder Data Breaches, Schutz der Business-Interessen und Sicherstellung der Weiterführung der Geschäftstätigkeit inklusive Desaster Recovery, Krisenmanagement und Contingency Planning.
 
 **2) Definieren Sie Notfall, Notstand und Krise**
 
@@ -12,7 +12,7 @@
 
 **3) Welche Fehler werden in kritischen Situationen gemacht?**
 
-> * Fehlende Akzeptanz 
+> * Fehlende Akzeptanz
 > * Meldewege nicht klar
 > * Fehlende Sensibilisierung
 > * Mobilfunknetz überlastet
@@ -30,7 +30,7 @@
 > | Ziel       | Fokus auf Kernprozesse    | Fokus auf Krisenfälle          |
 > | Intensität | schleichend bis plötzlich | Nur plötzlich                  |
 
- 
+
 **5) Welche Kriterien sind wichtig beim Aufbau der Notfallorganisation**
 
 > Klare Verantwortlichkeiten und Meldewege
@@ -51,11 +51,18 @@
 
 **8) Was gehört in das Notfallhandbuch?**
 
-> TODO
+> * Einleitung, Einordnung in das Thema
+> * Verantwortlichkeiten
+> * Begriffsdefinition
+> * Kontaktinfos
+> * Alamierungspläne und Meldewege
+> * Lieferanten
+> * Massnahmen
+>
 
 **9) Was muss bzgl. Notfallübungen beachtet werden?**
 
-> TODO
+> Verantwortungen klar, regelmässig geübt, vorgängig ausreichend informieren
 
 **10) Was bedeutet Disaster Recovery Planning (DRP)?**
 
@@ -79,8 +86,8 @@
 
 **14) Was bedeuten RPO und RTO?**
 
-• Recovery Point Objective (RPO): Wiederherstellungszeitpunkt, wieviel Datenverlust nimmt man in Kauf
-• Recovery Time Objective (RTO): Wiederherstellungsdauer, wie lange Ausfälle nimmt man in Kauf
+> * Recovery Point Objective (RPO): Wiederherstellungszeitpunkt, wieviel Datenverlust nimmt man in Kauf
+> * Recovery Time Objective (RTO): Wiederherstellungsdauer, wie lange Ausfälle nimmt man in Kauf
 
 **15) Wie setzen Sie Ihre Backup-Strategie um?**
 
@@ -93,4 +100,3 @@
 > * ...
 
 # Datenschutz und Privacy
-

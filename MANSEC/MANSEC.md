@@ -16,7 +16,7 @@ Grundziele IT-Security:
 
 ## Triple A
 
-Triple A (_Authentication, Authorization, Accounting)
+Triple A (_Authentication, Authorization, Accounting_)
 
 ## Dimensionen von IT-Sicherheitsfragen
 
@@ -34,7 +34,7 @@ Ziele und Aufgaben des Managements:
 
 Die Planung erfolgt auf _strategischer_, _taktischer_ und _operativer_ Ebene.
 
-## Entwicklung 
+## Entwicklung
 
 Aufgaben und Trends in der Information Security:
 
@@ -53,7 +53,7 @@ Aufgaben und Trends in der Information Security:
 * IT Security hat sich verändert mit neuen Technologien
 * Standards und Frameworks gewinnen an Bedeutung
 * Organisatorsche Probleme: **Risk Management**, **Governance** und **Compliance**
-* Technische Probleme: Komplexere Tools, Integration ins Gesamtsystem 
+* Technische Probleme: Komplexere Tools, Integration ins Gesamtsystem
 * Aufgaben Security Officer: coach, communicator, promoter and police
 * Security Officer wird vom Technokraten zum Manager
 * Rechtliche Aspekte gewinnen an Bedeutung
@@ -93,7 +93,7 @@ Die EISP beinhaltet einen Überblick über die Grundeinstellung der Unternehmung
 * Eine Richtlinie mit detaillierten Anweisungen für die Verwendung einer bestimmten Ressource oder Technologie.
 * Beinhaltet Informationen zu der erwarteten Verwendung und der Kontrolle eines eingesetzten Systems.
 
-Beispiele: E-Mail, Whatsapp und andere Kommunikation; Verwendung des Internets; Persönliche Verwendung von Unternehmensgeräten; Zugangsberechtigungen; ... 
+Beispiele: E-Mail, Whatsapp und andere Kommunikation; Verwendung des Internets; Persönliche Verwendung von Unternehmensgeräten; Zugangsberechtigungen; ...
 
 3. **SISP**: System-specific policies
 
@@ -209,7 +209,7 @@ Wie bei anderen Projekten ist auch bei der Policy Entwicklung eine rigorose Plan
 
 ## Policy Administrator
 
-Policies brauchen einen _Champion_und einen und Manager. Werden diese beiden Positionen kombiniert, nennt man das Ergebnis **Policy Administrator**. Dieser ist Verantwortlich für die Erstellung, Revision, Verteilung und Aufbewahrung der Policy.
+Policies brauchen einen _Champion_ und einen und Manager. Werden diese beiden Positionen kombiniert, nennt man das Ergebnis **Policy Administrator**. Dieser ist Verantwortlich für die Erstellung, Revision, Verteilung und Aufbewahrung der Policy.
 # Review Schedule, Procedures & Practices
 
 ### Schedule
@@ -238,14 +238,14 @@ Policies dienen hauptsächlich dazu, Angestellte zu informieren, welches Verhalt
 * Policies dürfen nicht mit dem Gesetz in Konflikt stehen und müssen vor Gericht _verheben_, falls angefochten.
 * Endbenutzer sollten in die Erstellung einbezogen werden.
 * Sollten beschreiben was gemacht werden muss, nicht gemacht werden darf und was die Konsequenzen bei Fehlverhalten sind.
-* Policies müssen **geschrieben, verteilt, gelesen, verstanden, zugestimmt UND durchgesetzt** werden 
+* Policies müssen **geschrieben, verteilt, gelesen, verstanden, zugestimmt UND durchgesetzt** werden
 * Drei Arten: Enterprise InfoSec Policy, Issue-Specific Policy, System-specific Policy
 
 # Audits
 
 ## Begriffe
 
-* **Audit**: Untersucht, ob Prozesse, Anforderungen und Richtlinien die geforderten Standards erfüllen, oftmals im Rahmen eines Qualitätsmanagements. Audits werden von dem speziell hierfür geschulten _Auditor_ durchgeführt. 
+* **Audit**: Untersucht, ob Prozesse, Anforderungen und Richtlinien die geforderten Standards erfüllen, oftmals im Rahmen eines Qualitätsmanagements. Audits werden von dem speziell hierfür geschulten _Auditor_ durchgeführt.
 
 * **Enterprise Governance**: Unternehmensführung & -lenkung, ein Set von Verantwortungen und Massnahmen des Managements zur Festlegung der _strategischen Ausrichtung_, Sicherstellung der _Zielerreichung_, _Risikomanagement_ und _Ressourcenverwaltung_.
 
@@ -289,8 +289,8 @@ Der Projektverlauf wird von vielen Einflüssen geprägt: _Systemsicherheit, Risi
 
 Um IS-Audits machen zu können braucht man folgendes:
 
-- die Sicherstellung des Management-Supports, 
-- die Festlegung der verwendeten Standards und 
+- die Sicherstellung des Management-Supports,
+- die Festlegung der verwendeten Standards und
 - die Definition der Ziele und des Umfangs
 - eine Geheimhaltungserklärung
 - Sicherstellung des Budgets / Vertrags
@@ -396,12 +396,12 @@ damit verfolgt werden**
 > * Risikomanagement = Umgang mit Risiken
 > * Risiko-Prozess = R-Identifikation, R-Analyse, R-Bewertung, R-Behandlung, begleitende Aufgaben (Kommunikation, Kontrolle etc.)
 
-**Sie erkennen den Zusammenhang von Governance, 
+**Sie erkennen den Zusammenhang von Governance,
 Risk und Compliance**
 
 > TODO
 
-**Sie kennen wichtige GRC Organisationen, Standards 
+**Sie kennen wichtige GRC Organisationen, Standards
 und Frameworks**
 
 > * ISO 27001: ISMS (Information Security Management Systems)
@@ -529,7 +529,7 @@ Bsp: Treiberversionen + Systemschriftarten + installierte Browser-Plugins + Bild
 
 ## Smartphones
 
-Inhalte werden vermehrt über Apps abgerufen. Diese verwenden kein HTTP, sondern eigene Kommunikationskanäle und haben oft Zugriff auf sehr viele persönliche Informationen wie Kontakte, Kalender, Lokation usw. 
+Inhalte werden vermehrt über Apps abgerufen. Diese verwenden kein HTTP, sondern eigene Kommunikationskanäle und haben oft Zugriff auf sehr viele persönliche Informationen wie Kontakte, Kalender, Lokation usw.
 
 Schutzmöglichkeiten:
 
@@ -548,7 +548,7 @@ Lokationsdaten mit Zeitangaben reichen aus, um 95% aller Individuen zu identifiz
 * Kreditkarte
 * Kameras
 * ...
-* 
+*
 
 Einfache Personenzähler und Gesichtserkennungssoftware sind weitere Arten Personendaten zu erfassen. _Computer Vision_ kann beispielsweise das Geschlecht, Alter, Gemütszustand, aber auch Tracking durch Erkennen von _Landmarks_ ermöglichen.
 
@@ -658,6 +658,3 @@ In einer _k-anonymous_ Tabelle ist jedes Tupel vom mindestens k-1 anderen Tupeln
 * Das Ziel des ganzen ist nicht der direkte Schutz von _sensiblen_ Daten, sonder von _charakteristischen_ Daten
 
 Das ganze kann versagen, wenn die sensitiven Werte zu wenig Vielfalt haben, oder wenn der Angreifer Hintergrundwissen hat.
-
-
-

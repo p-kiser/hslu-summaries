@@ -8,7 +8,7 @@ This is a guide on how to better obfuscate your code.
 
 # Language choice
 
-Use one of the big boy languages like C, Perl or assembly. They'll basically obfuscate themselves. All examples are in written in C.
+Use one of the big boy languages like C , Perl or Assembly. They'll basically obfuscate themselves. All examples are in written in C.
 
 # Syntax
 
@@ -18,7 +18,7 @@ Because `a=aaa*aa;` will always be more obfuscated than `result = value * factor
 
 ## macros and define
 
-In order to have short identifiers, _obfuscators&copy;_ tend to `#define` many things.
+In order to have short identifiers, _Obfuscators&trade;_ tend to `#define` many things.
 
 `TODO examples`
 

@@ -73,11 +73,6 @@ false & executed();
 
 **Analogie Kuchen**: Klasse = Rezept, Objekt = Kuchen
 
-* **Objekt**: Instanz, Member
-* **Klasse**: Klassentyp, Typ
-* **Attribut**: Variable, Member (= Status des Objekts)
-* **Methode**: Funktion, Operation (= Verhalten des Objekts)
-
 ## Klassen- und Objektdiagramme
 
 **Klassen** sind _programmiert_ und dienen als Vorlage zur Instanzierung von Objekten.
@@ -93,3 +88,8 @@ Das **Klassendiagramm** ist eine statische Sicht auf ein Programm und stellt die
 ![Beispiel Klassendiagramm](./img/bsp-obj.png)
 
 ## Synonyme
+
+* **Objekt**: Instanz, Member
+* **Klasse**: Klassentyp, Typ
+* **Attribut**: Variable, Member (= Status des Objekts)
+* **Methode**: Funktion, Operation (= Verhalten des Objekts)

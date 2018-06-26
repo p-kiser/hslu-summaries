@@ -15,7 +15,7 @@ Meine Notizen zu verschiedenen HSLU-Modulen und aus der Lehre.
 | FKOM |  | Inexistent |
 | ISF | Information Security Fundamentials | Inexistent |
 | ITEO | IT Engineering & Operation | Inexistent |
-| MANSEC | Managementaspekte der Informationssicherheit | Inexistent |
+| MANSEC | Managementaspekte der Informationssicherheit | Existent |
 | MATH | Grundlagen Mathematik | Inexistent |
 | MOD |  | Inexistent |
 | PLAB | Programmierlabor | Inexistent |

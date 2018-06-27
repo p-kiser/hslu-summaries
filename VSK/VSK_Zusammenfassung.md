@@ -848,7 +848,10 @@ Konfigurationsmanagent ist eine Führungsaufgabe:
 
 # Deployment
 
-Deployment ist die Bereitstellung / Auslieferung von Software und findet am Ende eines Projektes statt, oder bei iterativen Modellen kontinuierlich (Continuous Delivery erfordert Continuous Deployment).
+Deployment ist die Bereitstellung / Auslieferung von Software und findet am Ende eines Projektes statt, oder bei iterativen Modellen kontinuierlich (_Continuous Delivery_ erfordert Continuous Deployment).
+
+* __Continuous Delivery_: Analog zum Testen (Continuous Integration)
+*_Staging_: Deployment auf verschiedene Umgebungen (Entwicklung, Test, Integration, Vor-Produktion, Produktion)
 
 Aspekte von Deployment:
 
@@ -857,21 +860,31 @@ Aspekte von Deployment:
 * **Konfiguration**: Einstellung der Software auf jeweilige Anforderungen
 * **Organisation**: Information, Schulung, Support, Planung, Produktion
 
-Die Deployment-Dokumentation umfasst:
+Die **Deployment-Dokumentation** umfasst:
 
-* Technische Aspekte
+* **Technische Aspekte**
   * Deploymentdiagramme (Zuordnung der Komponenten zu Systemen / Hardware)
   * Installations- und Deinstallationsprogramme bzw. -skripte
   * Konfigurationen (Standard, Beispiele, kundenspezifisch usw.)
   * Installationsmedium / Bezugsquelle
   * Repositories zur Ablage der Binaries
-* Organisatorische Aspekte
+* **Organisatorische Aspekte**
   * Konfigurationsmanagement
   * Installations- und Bedienungsanleitung
   * Erwartungsmanagement: Welche Funktionalität ist vorhanden?
   * Bereitstellung von Support
 
+![Deployment Diagramm](./img/Deployment-Diagram.png)
+
 ## Aspekte des Deployments
+
+### Verteilung
+
+Versand von Programm und Dokumentation
+
+* Auf Datenträger
+* Download-Link
+* AUtomatische Installation
 
 ### Installation und Deinstallation
 
@@ -884,6 +897,41 @@ Die Deployment-Dokumentation umfasst:
 
 * Zielkonflikt: Muss out-of-the-box laufen und auf die eigenen Bedürfnisse anpassbar sein
 * Konfigurationsmanagement: Versionen, Lizenzen, Umgebungen: Lauffähige Kombinationen, welche Update-Schritte sind lauffähig, welche Szenarien wurden getestet?
+
+### Organisation
+
+* Information
+* Schulung
+* Support
+* Planung
+* Produktion
+
+## Deployment-Diagramme
+
+### UML 1.x
+
+![Deployment Diagramm UML 1.x](./img/dd1.png)
+
+### UML 2
+
+![Deployment Diagramm UML 2](./img/dd2.png)
+
+* _Node_: Stellt Computer / Host / Hardware dar (identisch zu UML 1.x)
+* _Artifact_: Stellt ein Binary / Skript dar, welches durch die Installation explizit einem Node zugeordnet wird.
+
+Artefacts werden in der Deployment-Spezifikation detaillierter beschrieben.
+
+### UML 2 Deployment-Spezifikation
+
+Enthält zusätzliche Angaben über die Konstruktion einer Einsatzkonfiguration:
+
+![Deployment-Spezifikation 1](./img/ds1.png)
+
+Das `manifest` verbindet ein Artefakt mit einer Komponente:
+
+![Deployment-Spezifikation 2](./img/ds2.png)
+
+In diesem Beispiel wird die Komponente _Order_ durch _order.jar_ realisiert.
 
 ### Deployment-Manuals
 
@@ -917,4 +965,717 @@ Alternativ: Zeitbasierte Modelle (Ubuntu)
 * Verteilung einzelner `.class`-Files ist fehleranfällig und deshalb inakzeptabel.
 * Die Verteilung von `.jar`-Archiven (gezippte `.class`-Files mit zusätzlichen Ressourcen und Metadaten)
 
-[Deployment Diagramm](./img/Deployment-Diagram.png)
+
+# Code-Qualität
+
+## Kommentare
+
+Schlechter oder schlecht verständlicher Code sollte nicht kommentiert, sondern wenn möglich umgeschrieben werden:
+
+* Kommentare werden oft als Ausrede für schlechten Code verwendet
+* Selbsterklärender Code ist besser als jeder Kommentar
+* GUte Namensgebung kann viele Kommentare ersparen
+
+Kommentare sind kein Qualitätsmerkmal, sondern oft ein notwendiges Übel:
+
+* Code wird geändert, ohne dass der Kommentar angepasst wird
+* Kommentare können lügen, Code nicht
+
+Akzeptable Kommentare:
+
+* Copyright, Lizenzbedingungen
+* temporäre Einträge (`TODO`, `FIXME`)
+* Zur Hervorhebung besonders wichtiger, aber unauffälliger Dinge
+* Zusätzliche Erklärungen zur Absicht des Codes
+* Warnungen
+
+Schlechte Kommentare:
+
+* Redundante Kommentare: `file.save(); // save the file`
+* Irreführende Kommentare: `extension = ".xml" // txt file`
+* erzungene Kommentare: JavaDoc für Getter und Setter
+* Tagebuch und Changelog-Kommentare: Versionskontrolle verwenden
+* Positionsbezeichnungen und Banner `// 3) noew save the changes`
+* Zuschreibungen und Nebenbemerkungen `// created by XYZ (xyz@foo.com)`
+* Auskommentierter Code: kann dank Versionskontrolle gelöscht werden.
+* HTML-Kommentare: Im Code schlecht lesbar
+* Zu viele und unnötige Informationen `// written on my balcony at 5:00 am`
+
+## Namensgebung
+
+Namen, besonders von Klassen und Interfaces, sollten gut überlegt sein. Kriterien für gute Namen sind:
+
+* zweckbeschreibend
+* korrekt und ohne Fehlinformationen
+* differenzierend
+  * `int a; float b;` → `int factor; float sum;`
+* gut aussprechbar und suchbar, Sonderzeichen vermeiden
+  * `String достопримечательность;` → `String attraction;`
+  * `int n_pâtés_mangées;` → `int pates_eaten;`
+  * `double schnäderegägs;` → `double babble;`
+* Möglichst keine Codierungen:
+  * `range_0x00_0xff;` → `rangeFirstByte`
+  * `clr00ff00` → `rgbGreen`
+
+Heuristiken zur Namensgebung:
+
+1. Beschreibende Namen wählen
+2. Namen passend zur Abstraktionsebene wählen
+3. Standardnomenklatur verwenden
+4. Eindeutige Namen wählen
+5. Codierungen vermeiden
+6. Nebeneffekte in Namen miteinbeziehen
+
+## Funktionen
+
+Funktionen sollten klein sein:
+
+*  Dadurch sind Funktionen schneller verständlich.
+* Die Konsequenz davon ist, dass es mehr Funktionen und evt. auch mehr Klassen, da Klassen ebenfalls nicht zu lange sein sollten.
+* Dies wiederum wirkt sich positiv auf die Testbarkeit aus.
+* _Faustregel_: Man sollte (mit einer vernünftigen Schriftgrösse) in einer Funktion nicht scrollen müssen.
+
+Jede Funktion hat nur eine Aufgabe, welche sie gut erledigt (Unix-Philosophie):
+
+* Finden der Aufgabe mit 'to'-Satz: "to sort an array", "to establish a connection"
+* Abschnitte in Funktionen deuten auf die Verletzung dieses Prinzips hin.
+
+Jede Funktion arbeitet auf nur einer Abstraktionsebene (_Single Level of Abstraction_):
+
+* Eine Funktion, die Zeilen zählt, sollte sich nicht auch noch mit Encodings befassen
+* Eine Funktion, die Zahlen rundet, sollte sich nicht mit Little- und Big-Endian kümmern
+
+Die `switch`-Anweisung sollte vermieden werden:
+
+* deutet auf mehrere Aufgaben hin (verletzt _Single Responsibility Principle_)
+* muss bei jeder Erweiterung angepasst werden (verletzt _Open-Closed Principle_)
+* treten of im Code mehrmals auf (verletzt _Dont Repeat Yourself Principle_)
+* Lösung Polymorphe Konstrukte (z.B. Stategy-Pattern, Funktionsreferenz)
+
+Die Anzahl der Funktionsargumente sollte klein gehalten werden:
+
+* Vertauschungsgefahr bereits bei zwei Argumenten
+* Lesbarkeit verschlechtert sich mit Anzahl Funktionsargumente (Zeilenumbrüche, horizontales Scrolling)
+* Je mehr Funktionsargumente übergeben werden müssen, desto eher wird eines falsch gesetzt
+  * Ausprobieren von Kombinationen ist die Folge
+  * Dokumentation muss konsultiert werden
+
+Aber: Die eindimensionale Lösung aus _Clean Code_ ("Je weniger Funktionsargumente, desto besser") ist mit Vorsicht zu geniessen:
+
+* `summe = addiere(summand1, summand2)` → strukturierte / funktionale Lösung
+* `summe = summand1.addiere(summand2)` → objektorientierte Lösung
+* `summierer.a = summand1; summierer.b = summand2; summe = summierer.summiere();`
+
+Die dritte Variante hat keine Funktionsargumente, ist aber die denkbar schlechteste, da sie einen bestimmten Kontext voraussetzt.
+
+Ausserdem gibt es Funktionen die aus _fachlicher Sicht_ viele Parameter benötigen:
+
+* `Point p = new Point(12, 33);`
+* `Color translucentSalmon = new RGBA(255, 153, 153, 0.5);`
+
+Namensgebung von Parametern: Die Funktion soll unter Beibehaltung der Parametertypen und Weglassung der Namen noch verständlich sein:
+
+*  Gut: `createPoint3D(int _, int _, int _);`
+* Schlecht: `createFile(String _, int _, boolean _);`
+
+Auf Flag-Argumente sollte verzichtet werden. Besser mehrere Funktionen mit sprechenden Namen:
+
+* Schlecht: `openFile("foo.txt", true)`
+* Besser: `openFileCreateIfNotExists("foo.txt");`
+
+Auf ungewollte Nebeneffekte sollte verzichtet werden. Die Funktion sollte keine zusätzliche, verborgene Aufgabe ausführen (verletzt das _Single Responsibility Principle).
+
+* Schlecht: `checkPassword(username, password); // creates Session if successful`
+* Besser `tryLogin(username, password);`
+
+Output-Argumente sollen vermieden werden. Der Rückgabewert ist für das Ergebnis der Funktion vorbehalten. Exceptions sind Fehlercodes vorzuziehen. Das ermöglicht die Trennung von Programmablauf und Fehlerbehandlung.
+
+Lage Namen sind sprechender, aber mühsamer in der Handhabung. Die Länge des Namens sollte deshalb dem Gültigkeitsbereich angepasst werden:
+
+* `absolutePathToFileSystemTableFile` OK für globalen Scope
+* `i` für den Arrayindex und `n` für die Anzahl Elemente in einem Loop (ausrechend, da konventionell)
+
+## Unit-Tests
+
+Definition Unit Test:
+
+> «A unit test is an automated piece of code that invokes a unit of work in the system and then checks a single assumption about the behaviour of that unit of work.»
+
+* Unit-Tests geben schnelles Feedback, ob etwas grundsätzlich funktioniert.
+* Unit-Tests als Basis für Refactoring: Was vorher funktioniert hat, muss auch nacher funktionieren.
+* Test-Code ist kein "Wegwerfcode" und sollte gleich hohe Qualität haben, wie der getestete Code (Namensgebung, Struktur, Verständlichkeit).
+* Testcode muss gut lesbar sein (Klarheit, Einfachheit, Ausdrucksdichte)
+* Test Driven Development: Tests und Produktivcode unmittelbar nacheinander schreiben
+  * Zuerst Unit-Test schreiben
+  * Test sollte fehlerfrei kompilieren, aber scheitern
+  * Produktiver Code implementieren so implementieren, dass der Test erfolgreich durchläuft
+* Aussagekräftige Namen bei Assert-Methoden
+* Pro Testfall eine Assertion
+* Pro Testfall nur eine Sache testen
+* BOC-Pattern
+  * Build: Testdaten erstellen
+  * Operate: Testdaten manipulieren
+  * Check: Ergebnisse verifizieren
+* AAA-Pattern
+  * Arrange: Ausgangssituation schaffen
+  * Act: Aktion ausführen
+  * Assert: Ergebnis überprüfen
+* FIRST-Prinzip
+  * Fast: Tests sollen schnell sein
+  * Indipendent: Tests sollen unabhängig voneinander ausführbar sein
+  * Repeatable: Tests sollen immer auf jeder Umgebung ausführbar sein
+  * Self-Validatng: Das Testergebnis muss sofort ersichtlich sein (failure/success)
+  * Timely: Tests sollen rechtzeitig und möglichst vor dem Produktivcode geschrieben werden
+
+Test-Heuristiken von Clean Code:
+1. Unzureichende Tests vermeiden, möglichst hohe Testabdeckung anstreben
+2. Coverage-Werkzeug verwenden: Nicht abgedeckte Codeteile ermitteln
+3. Triviale Tests umsetzen: Nichts ist zu trivial, um getestet zu werden
+4. Ignorieren von Tests: Nur temporär, mit `@ignore` statt auskommentieren
+5. Grenzbedingungen testen: der ganze Wertebereich soll abgedeckt werden
+6. Fehler-Nachbarschaft testen: wo ein Fehler ist, ist oft auch ein zweiter
+7. Muster des Scheiterns analysieren: Anhand von Gemeinsamkeiten auf Ursachen schliessen
+8. Coverage im Fehlerfall analysieren: Branch möglicherweise aufgrund von Tippfehler verpasst
+9. Schnelle Tests, damit sie oft und gerne ausgeführt werden
+
+## Weitere Massnahmen
+
+Reviews:
+
+* Effizienteste Methode zur Verbesserung der Code-Qualität
+* Zu Beginn alleine oder in kleineren Teams, später mit mehreren Teilnehmern
+* In vertrauensvoller Atmosphäre, nicht als QS-Massnahme oder in Verbindung mit KPIs
+
+Weitergabe von Erfahrungen im informellen Austausch:
+
+* Mit Snacks als Anreiz, vor/nach Pause
+
+Bemühungen für sauberen Code als Motivation und zur Erinnerung optisch präsent halten
+
+Werkzeuge: Checkstyle, PMD, Findbugs, SonarQube etc.
+
+Pfadfinderregel: Den Code sauberer zurücklassen, als man ihn angetroffen hat.
+
+# Verteilte Systeme
+
+## Socket-Kommunikation
+
+Netwerkschichten:
+
+* Application Layer: HTTP, SMTP, FTP, DNS
+* Transport Layer: TCP, UDP
+* Internet Layer: IP
+* Network Layer: Ethernet, WLAN, DSL, UMTS, LTE
+
+Begriffe:
+
+* Host: Ein Computer im Netzwerk
+* Socket: Kommunikationsendpunkt, definert durch IP-Adresse und Port
+* Server: Dienstleister, stellt Daten / Ressourcen zur Verfügung
+* Client: Kunde / Dienstnehmer, der Dienste vom Server verwendet
+
+Socket-Lebenszyklus:
+
+1. Server: Socket erzeugen und an lokalen Port binden
+2. Server: Mit `accept()` auf eingehende Verbindung warten
+3. Client: Verbindung mit Server herstellen
+4. Client/Server: Daten über Socket lesen/schreiben
+5. Client: Verbindung schliessen
+6. Server: Socket schliessen
+
+### Java Sockets
+
+Package: `java.net.*` mit den Klassen:
+
+* `InetAddres`:
+  * `static InetAddress getByName(String host)`
+  * `String getHostName()`
+  * `String getHostAddress()`
+  * `String getCanonicalHostNAme()` (fully qualified domain name)
+  * `boolean isReachable(int msec)`
+  * `static InetAddress getLocalHost()`
+  * `boolean isSiteLocalAddress()`
+* `Socket`
+  * `Socket(String host, int port)` Socketverbindung
+  * `OutputStream getOutputStream()` für schreibenden Zugriff
+  * `InputStream getInputStream()` für lesenden Zugriff
+* `ServerSocket`
+  * `ServerSocket(int port)` Socket, der auf `port` hört
+  * `ServerSocket(int port, int backlog, InetAddress addr)` mit Grösse Warteschlange und spezifischer IP-Adresse
+  * `Socket accept()` Verbindung entgegennehmend (blockierend)
+* `NetworkInterface`
+  * `static Enumeration<NetworkInterface> getNetworkInterfaces()`
+  * `String getDisplayName()`
+  * `Enumeration<InetAddress> get InetAddresses()`
+
+## Serialisierung
+
+Ablauf und Umfang des Java-Serialisierungsverfahrens:
+
+1. Metadaten (fully qualifizierter Klassenname, Signatur, Versionsnummer) in den Bytestrom schreiben
+2. Rekursive Serialisierung nicht-statischer, nicht-transienter Attribute (`private`, `protected`, `public`) und aus Oberklassen geerbte Attribute
+3. Zusammenfassen der entstandenen Byteströme zu einem bestimmten Format:
+
+**Objektserialisierung in Java**:
+
+- JOS (Java Object Serialization): binäres Format
+- JBP (Java Bean Persistence): Abspeicherung von Java Beans als XML
+- JAXB (Java Architecture for XML Binding): Abbilden von Objektstrukturne auf XML
+
+**Standard-Serialisierung (Klassen, Interface, Methoden)**:
+
+* Idee: Dekoration eines Input- oder Output-Streams (`FileInputStream`, `BufferedOutputSteam`)
+
+
+* Interface `java.io.ObjectOutput`, Klasse `java.io.ObjectOutputStream`
+  - `void ObjectOutputStream.writeObject(Object obj)`: rekursives Abarbeiten des Objekt-Parameters
+* Interface `java.io.ObjectInput`, Klasse `java.io.ObjectInputStream`
+  - `Object ObjectInputStream.readObject()` Aufbauen der Objekthierarchie aus Bytestrom (Cast notwendig)
+
+
+* Marker-Interface `java.io.Serializable` (keine Methoden): Muss implementiert werden, damit Objekte serialisert werden können
+  - Automatische Serialisierbarkeit von erbenden Klassen
+
+
+* spezielle Methoden auf dem jeweiligen Objekt
+
+
+* `Object readResolve()`: erlaubt Manipulation des deserialisierten Objekts
+  * zur Wiederherstellung transienter Eigenschaften
+  * zum Garantieren der Eindeutigkeit bie Singleton-Objekten
+
+
+* `void writeObject(final ObjectOutputStream oos)`
+  * eigens definierte Serialisierung anhand des Bytestroms
+  * Aufruf von `oos.defaultWriteObject()` zum Erweitern der Serialisierung
+* `void readObject(final ObjectInputStream ois)`
+  * eingens definierte Deserialisierung anhand des Bytestroms
+  * Aufruf von `ois.defaultReadObject()` zum Erweitern der Serialisierung
+
+
+* Klonen von beliebigen Objekten per Serialisierungund anschliessender Deserialisierung
+  * `ByteArrayOutputSteam` → `ObjectOutputStream` → `ByteArrayInputStream` → `ObjectInputStream`
+
+
+* Transiente Attribute: für berechnete, zwischengespeicherte Felder
+  * Schlüsselwort `transient`: `private transient STring fullName;`
+  * Deserialisierung: Implementierung der Methode `readResolve()`
+
+
+* Serialisierung und Vererbung
+  * private Felder nicht-serialisierbarer Oberklassen werden nicht serialisiert
+  * Deserialisierung: Suche und Aufruf des parameterlosen Konstruktors der ersten nicht-serialisierbaren Oberklasse: es muss ein solcher existieren
+  * Implementierung von `readObject()` und `writeObject()` muss sich um Zustand der Oberklasse kümmern
+  * Verhinderung von Serialisierung bei Unterklassen durch Überschreibung von `writeObject()` und `readObject()` möglich
+
+
+* Versionierung: aufgrund langer Zeitspannen zwischen Serialisierung und Deserialisierung mit wechselnden Umgebungen (Laufzeit, Softwareversion) unbedingt nötig
+  * Angabe über Attribut: `public static long serialVersionUID = ...;`
+  * Andernfalls automatische Berechnung eines Hash-Werts zur Laufzeit anhand verschiedener Klassenparameter (nicht empfohlen)
+  * Neuerstellung der `serialVersionUID` bei inkompatiblen Änderungen der Klasse$
+  * Ein Objekt kann nur deserialisiert werden, wenn seine Klasse die gleiche Version hat, wie sie die grundlegende Klasse des serialisierten Objekts bei der Serialisierung hatte
+
+
+## Message Passing
+
+Message Passing: Kommunikationsparadigma zum Versenden einer Nachricht von einem Sender zu einem oder zu mehreren Empfängern.
+
+### Arten von Nachrichten
+
+* (Remote) Method Invocation
+* Signale
+* Datenpakete
+
+### Designentscheide bei der Entwicklung eines _Message-Passing-Systems_:
+
+1. Nachrichtenübertragung:
+	* _zuverlässig_
+	* _unzuverlässig_ 
+2. Übertragungsreihenfolge:
+	* _garantiert_
+	* _beliebig_
+3. Sender-Empfanger-Beziehung:
+	* _Unicast_: ein Sender, ein Empfänger
+	* _Multicast/Broadcast_: ein Sender, mehrere Empfänger
+	* _Client-Server_: mehrere Sender, ein Empfänger  
+	* _All-to-all_: mehrere Sender, mehrere Empfänger
+4. Kommunikation:
+	* _synchron_: Sender blockiert, bis Empfänger die Nachricht entgegengenommen hat (Telefonie, Instant Messaging)
+	* _asynchron_: Sender führt seine Aufgabe nach Versendne einer NAchricht fort (E-Mail, Diskussionsforum)
+5. Kommunikation:
+	* _persistent_: Nachrichten bis zur Bereitschaft des Empfängers zwischenspeichern (E-Mail)
+	* _transient_: Nachricht während Ausführung von sendender und empfangender Applikation zwischengespeichert (Router, Socket)
+
+### Beispiele Kommunikationsformen
+
+Nachricht A → B
+
+#### Persistent und asynchron (HTTP/REST)
+
+1. A sendet eine Nachricht und wird fortgesetzt
+2. B läuft nicht
+3. B wird gestartet und empfängt die Nachricht
+4. A ist fertig
+
+#### Persitent und synchron (E-Mail)
+
+1. A sendet Nachricht und wartet, bis diese akzeptiert wurde
+2. B speichert die Nachricht für spätere Auslieferung ab
+3. B meldet A, dass die Nachricht akzeptiert wurde
+4. B wird gestartet und empfängt die Nachricht
+
+#### Tranisent und asynchron, empfangsbasiert (UDP)
+
+1. A sendet eine Nachricht und wird fortgesetzt
+2. B muss laufen, damit die Nachricht gesendet werden kann
+3. B empfängt die Nachricht
+
+#### Transient und synchron (TCP)
+
+1. A sendet eine Nachricht und wartet auf die Empfangsbestätigung
+2. B läuft, macht aber gerade etwas anderes
+3. B nimmt die Nachrig _während anderer Tätigkeit_ entgegen und bestätigt dies A
+4. B verarbeitet die Nachricht nach Abschluss der anderen Tätigkeit
+
+#### Transient und synchron, auslieferungsbasiert (asynchroner RPC)
+
+1. A sendet eine Nachricht und wartet, bis diese akzeptiert wurde
+2. B empfängt die Nachricht, macht aber, gerade etwas anderes
+3. B bestätigt die Annahme der Nachricht _nach Abschluss der anderen Tätigkeit_.
+4. B verarbeitet die Nachricht
+
+
+#### Transient und synchron, antwortbasiert: RMI
+
+1. A sendet eine Nachricht und wartet auf eine Antwort
+2. B läuft, macht aber gerade etwas anderes
+3. B nimmt die Nachricht entgegen
+4. B verarbeitet die Nachricht entgegen
+
+### MPI
+
+Message Passage Interface: Standard für den Nachrichtenaustausch: definiert eine API, ist kein konkretes Protokoll und keine Implementierung.
+
+## Nachrichtenverarbeitung
+
+Eigenschaften von Nachrichten:
+
+* werden über einen _Kommunikationskannal_ gesendet
+* enthalten eine Anzahl Elemente eines bestimmten Datentyps
+	* ID: nicht immer nötig
+	* Argumente: einfache Datentypen oder mit zusätzlichen Informationen/Instruktionen versehen
+
+Solche Nachrichten sind Protokollen wie HTTP, RMI usw. vorzuziehen, wenn:
+
+* Kommunikation und zu übertragende Datenstrukturen simpel sind
+* Transaktionsdurchsatz kritisch ist (Echtzeit-Anwendung)
+* die Entwicklungsressourcen limitiert sind
+* spezielle Protokolle benötigt werden
+* andere Protokolle nicht verfügbar sind
+
+**Prinzipien der Nachrichtenverarbeitung**:
+
+* Trennung von Kommunikations- und Applikationsdetails
+* Kommunikation scheint auf Applikationsebene vonstatten zu gehen (untere Layer sind transparent)
+
+## Protokollarten
+
+**Fixe Protokolle**: Prarameter zu Beginn der Sitzung bekannt, keine Änderung während der Kommunikation
+
+**Adaptive Protokolle**: Parameter können während einer Sitzung ändern (Länge Argumentliste, Argumenttypen, Nachrichtentypen)
+	
+* Änderungen per anpassbarem _Message Handler_ zur Laufzeit
+* Kann mit dem _Prototyp-Design-Pattern_ umgesetzt werden: Neue Nachrichten nicht als Klassen, sondern als Erweiterung vom Prototyp-Objekt
+* Liste bekannter Nachrichtentypen wird zur Laufzeit erweitert 
+
+# Verteilung & Kommunikation: RMI
+
+**Verteiltes System**: System, in dem sich Hardware- und Softwarekomponenten auf vernetzten Computern befinden und miteinander über den Austausch von Nachrichten kommunizieren.
+
+**Verteilte Anwendung**: Anwendung, die ein verteiltes System als Kommunikationsinfrastruktur für ihre verteilten Komponenten nutzt.
+
+## Middleware
+
+Middleware: anwendungsneutrale Vermittlungssoftware, die zwischen Anwendungen vermittelt, und dabei den Anwendungen ihre Komplexität und diejenige der Infrastruktur verbirgt.
+
+### Arten von Middleware:
+
+* _Kommunikationsorientierte Middleware_: abstrahierte Netzwerkprogrammierung (RMI)
+* _Nachrichtenorientierte Middleware_: arbeitet über den Austausch von Nachrichten (messages) mithilfe von Warteschlangen (queues): JMS, SOAP
+* _Anwendungsorientierte Middleware_: unterstützt verteilte Anwendungen: JEE, .NET
+
+### Transparenz von Middleware
+
+* _Ortstransparenz_: Der Benutzer braucht nicht zu wissen, wo sich ein Dienst oder eine Ressource befindet
+* _Zugriffstransparenz_: Der Zugriff erfolgt immer gleich, egal von welchem Netzwerk aus (lokal, remote)
+* _Nebenläufigkeitstransparenz_: Mehrere Benutzer können gleichzeitig auf die Dienste und Ressourcen zugreifen. das System ermöglicht exklusive Zugriffe, Synchronisation und Replikation von Daten.
+* _Fehler- und Ausfalltransparenz_: Fehler, die durch die Verteilung auftreten können (Übertragungsfehler, Komponentenausfall) bleiben der Anwendung weitgehend verborgen
+* _Sprachtransparenz_: DIe Kommunikation zwischen Komponenten ist nicht von deren Implementationssprache abhängig
+* _Replikationstransparenz_: Ressourcen werden bei Bedarf automatisch repliziert, um die benötigte Performance bieten zu können.
+
+### Architekturmodelle
+
+_Client-Server vs. Peer-to-Peer_:
+
+* Client-Server: langlebiger Serverprozess, kurzlebige Client-Prozesse
+* Peer-to-Peer: Austausch zwischen gleichberechtigten Prozessen
+
+_Fat- vs. Thin-Client_:
+
+* Fat-Client: enthält Verarbeitungslogik und Benutzeroberfläche
+* Thin-Client: bezieht Verarbeitungslogik und Benutzeroberfläche von einem Server
+* Kombination: Fat-Client & Thin-Server, Thin-Client & Fat-Server
+
+_2-, 3-, n-Tier_:
+
+* 2-Tier: Datenhaltung von Präsentation/Anwendungslogik getrennt
+* 3-Tier: Je ein Tier für Datenhaltung, Präsentation und Anwendungslogik
+* n-Tier: Weitere Verteilung von Datenhaltung und Anwendungslogik
+
+## Remote Method Invocation (RMI)
+
+![Arbeitsweise von RMI](./img/RMI.png)
+
+Arbeitsweise von RMI:
+
+1. Remote-Interface: Methode(n) zur Bereitstellung als Dienst
+2. Server-Klasse: Implementiert Remote-Interface
+3. Registry: Registrierung der Remote-Objekte unter eindeutigem Namen
+4. Suche: Client findet Remote-Objekt über dessen Namen
+5. Aufruf: Verteilung für Client (Parameterübergabe) und Server (Rückgabe) transparent
+
+Technische Umsetzung von RMI:
+
+* Client- und Server-Stub: Stellvertreterobjekte, die das Remote-Interface implementeren
+* Kommunikation über Remote Method Protocol auf Basis on TCP/IP-Verbindungen
+* RMI-Transportschicht erfolgt über Stubs (Server-Stub kennt Remote-Objekt)
+* Parameterübergabe: primitive Datentypen und serialisierbare Objekte (call by value)
+* Übergabe von Verweisen auf Remote-Objekte ohne Serialisierung (call by reference)
+
+Vorgehen bei der Entwicklung von RMI-Anwendungen:
+
+1. Definition des Remote-Interfaces (grundsätzlich ein normales Java-Interace):
+	* Muss von Interface `Remote` erben
+	* Jede Methode soll eine `RemoteException` werfen können
+	* Parameter und Rückgabewert: primitive Datentypen oder serialisierbare Klassen
+2. Implementierung des Remote-Interfaces:
+	* Ableitung von `UnicastRemoteObject` oder Export per `UnicastRemoteObject.exportObject()`
+3. Aufstarten der RMI-Registry: `rmiregistriy`, Standardport 1099
+	* per automatisch generierter URL
+	* programmatischer Zugriff mittels `java.rmi.registry`-Paket
+	* Server kann (aus Sicherheitsgründen) nur eine Registry manipulieren, die auf dem gleichen Rechner läuft
+	* Registry unterstützt keine hierarchische Namensräume oder dynamische Namen
+4. Erzeugung und Registrierung von Remote-Objekten:
+	* `Naming.bind(url, remoteObject)`
+	* URL: `rmi://localhost:1099/calcSum`
+	* Dynamisches Laden von Klassen erfordert einen `SecurityManager`
+5. Implementierung des Clients, Remote-Objekt finden und aufrufen:
+	* `Naming.lookup(url)`mit entsprechendem Cast liefert Referenz auf Remote-Objekt
+
+**Codebase**: Unter Einsatz eines Security Managers kann Code auf einem entfernten Rechner geladen werden. Die Codebase wird über das JVM-Propperty `java.rmi.codebase` definiert, welches beim Aufstarten der Anwendung oder im Code derselben gesetzt werden kann.
+
+* `java -Djava.rmi.server.codebase=http://localhost:8080  -jar  anwen-
+dung.jar`
+* `System.setProperty("java.rmi.server.codebase", "http://localhsot:8080")`
+* Der Code muss per HTTP zur Verfügung gestellt werden (`tool.jar` vom JDK)
+	* `java -jar tool.jar -port 8080 -dir anwendung/`
+
+**Security Manager**: Einschränkungen von Code, der aus dem Netzwerk geladen wir (Netzwerkverbindungen, Dateisystemzugriff, Lesen/Schreiben von Properties, Ausführen externen Programme, Nachladen von Libraries usw.)
+
+* `Djava.security.manager` : Beim Aufstarten der Anwendung
+*  `get-SecurityManager()` : Im Code, prüfen ob Security Manager bereits aktiviert ist
+* `System.setSecurityManager(new SecurityManager());` : im Code
+* Definition der Sicherheitsrichtlinie in `policy`-Datei
+	* `-Djava.security.policy=my.policy` : per Kommandozeile
+	* `System.setProperty("java.security.policy", "my.policy");` : im Code
+	* `my.policy` muss im aktuellen Arbeitsverzeichnis vorliegen
+	* Gewährung und Berechtigung per `grant`
+* Zusätzliche Angaben (optional):
+	* Codebase: Rechte von Klassen aus bestimmten Quellen
+	* Signierung: Rechte werden nur für signierten Code ausgewählt
+	* Principal: Sonderrechte für authentifizierte Benutzer
+
+
+### Beispiele Security-Policies
+
+Security-Policy, die für alle Berechtigunen gewährt (für Testzwecke):
+
+```
+grant {
+	permission java.security.AllPermission;
+};
+```
+
+Security-Policy für Sockets (ausgehende Verbindung zu `localhost:1099` und eingehende Verbindungen auf Prot 1024 erlauben):
+
+```
+grant {
+	permission java.net.SocketPermission "localhost:1099", "connect,resolve";
+	permission java.net.SocketPermission "*:1024", "accept,resolve";
+};
+```
+
+### RMI Codebeispiel
+
+**Remote-Interace**:
+
+```java
+public interface RemoteSUm extends Remote {
+	public int sum(int a, int b) throws RemoteException;
+}
+```
+
+**Implementierung des Remote-Interfaces**:
+
+```java
+public class RemoteSumImpl extends UnicastRemoteObject implements RemoteSum {
+	@Override
+	public int sum(inta, int b) throws RemoteException {
+		return a + b;
+	}
+}
+```
+
+**Erzeugung der Registry**: 
+
+```java
+public class RegistrySetup {
+	public statuc void main(String[] args)
+			throws RemoteException, InterruptedException {
+		Registry registry = LocalRegistry.createRegistry(
+			Registry.REGISTRY_PORT); // 1099
+		synchronized (reg) {
+			reg.wait(); // interaktiver Wartezustand, nicht terminieren!
+		}
+	}
+}
+```
+
+**Implementierung des Clients**:
+
+```java
+public class SumClient {
+	public class SumClient {
+		try {
+			int a = 65;
+			int b = 23;
+			String url = "rmi://localhost:1099/sum";
+			RemoteSum sum (RemoteSum) Naming.lookup(url);
+			int result = sum.sum(a, b); // 88
+		} catch (RemoteException | NotBoundException | MalformedURLException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```
+
+## Push-Prinzip
+
+Umsetzung des Push-Prinzips mit RMI:
+
+1. Registrierung der Services
+	* Der Server bietet einen Dienst an, auf welchem sich Clients für Notifikationen registrieren können.
+	* Der Client bietet einen Dienst an, welchen der Server für die Notifikation aufrufen kann. Jeder Client registriert sein Remote-Objekt unter einem eindeutigen Namen.
+2. Vorbereiten der Push-Kommunikation
+	* Der Client findet den serverseitigen Service für die Registrierung
+	* Der Client registriert sich beim Server, um Notifikationen zu erhalten. er übergibt dem Server den eindeutigen Namen, unter dem sein Remote-Objekt auf der Registry zu finden ist.
+	* Der Server findet den clientseitigen Service für die Notifikationen anhand des zuvor übergebenen eindeutigen Namens.
+3. Notifizierung des Clients
+	* Auf dem Server tritt ein Ereignis ein, das für die Clients von Interesse ist
+	* Der Server notifiziert alle Clients über deren Notifikationsservice
+
+Mit dieser Architektur lassen sich verteilte Observer und Callback-Aufrufe realisieren.
+
+# Uhrensynchronisation
+
+Uhren müssnen synchronisiert werden, damit man sich an Zeiten halten kann. Durch unterschiedliche Uhrzeiten auf verschiedenen Systemen kann die Kausalität verloren gehen.
+
+**Timer**: Elektronische Schaltung im Computer auf Basis schwingender Quarzkristalle, welche die Schwingungen zählt und in regelmässigen Abständen Interrupts erzeugt.
+
+**Uhr-Tick**: Durch den Timer erzeugter Interrupt. Beispiel: `H = 60` 60 Interrupts pro Sekunde.
+
+**Uhr-Asymmetrie**: Zeitwerte von annfangs synchronisierten Uhren laufen aufgrund unterschiedlicher Frequenz schwingender Kristalle auseinander.
+
+## Algorithmen
+
+Uhren in verteilten system abgleichen:
+
+### Algorithmus von Cristian
+
+Prozess _P_ synchronisieren sich mit Zeitserver _S_:
+
+1. _P_ fragt _S_ zum Zeitpunkt _t<sub>0</sub>_ nach der Zeit
+2. _S_ verarbeitet die Anfrage in Zeitspanne _I_
+3. _P_ empfängt die Antwort _C<sub>M</sub>(t<sub>1</sub>)_
+4. _P_ setzt Zeit auf _C<sub>M</sub>(t<sub>1</sub>)_ + _RTT/2_
+	* _RTT = (t<sub>1</sub> - t<sub>0</sub>)_ falls _I_ unbekannt
+	* _RTT = (t<sub>1</sub> - t<sub>0</sub>) - I_ falls _I_ bekannt
+
+Für genauere Werte werden Messungen durchgeführt, Ausreisser ignoriert, Mittelwerte berechnet etc.
+
+Problem: Geht die Uhr vor, kann sie nicht einfach zurückgedreht werden (inkonsistente Zustände). Deshalb wird die Uhr verlangsamt, bis sie wieder synchron ist.
+
+### Berkeley-Algorithmus
+
+Ermittlung der Durchschnittszeit aller Rechner:
+
+1. Ein Zeitserver fragt die lokale Zeit aller Clients in regelmässigen Abständen ab
+2. Die tatsächliche Zeit wird unter Berücksichtigung der Latenzzeit (siehe _Cristian_)
+3. Der Zeitserver ermittelt einen Mittelwert aller Clients und seiner Zeit
+4. Zeitserver meldet den Client die korrekte Zeit
+5. Uhren auf Clients laufen schneller oder langsamer, bis sie mit der errechneten zentralen Zeit übereinstimmen
+
+### Network Time Protocol (NTP)
+
+Synchronisierung der Rechneruhren im Internet
+
+* NTP-Daemon auf allen gängigen Rechnerplattformen verfügbar
+* Genauigkeit: WAN ~10ms, LAN < 1ms
+* Stratum 1 (primärer Zeitgeber), Stratum (empfängt Zeit von S1), ..., Stratum (n) NTP-Clients
+
+
+## Logische Uhren
+
+> Es genügt, wenn sich die Rechner innerhalb eines verteilten Systems über eine
+Uhrzeit einig sind; eine Übereinstimmung mit der (tatsächlichen) Uhrzeit ausserhalb des Systems ist nicht nötig.
+
+-- Leslie Lamport (1978)
+
+
+**Logische Uhr**: Gibt Ereignissen eindeutige Zeitstempel (monoton steigende Werte), sodass eine kausale Ordnung der Ereignisse erkennbar ist.
+
+**Lamport-Zeitstempel**: bei kausalen Zusammenhängen, wird der Zeitstempel korrigiert, indem er um eins hochgezählt wird:
+
+* Senden der Nachricht: Zeitpunk `t`
+* Empfangen der Nachrint: Zeitpunkt `t + 1`
+
+Dadurch ist die schwache Uhrenbedingung (Erhaltung der Kausalität) gegeben.
+
+# Verteilung: Data Grid
+
+## CAP-Theorem (Brewers Theorem)
+
+> In einem verteilten System ist es nicht möglich, gleichzeitig folgende drei Eigenschaften zu garantieren:
+>
+> * Consistency: alle Kopien manipulierter Daten sind aktualisiert
+> * Availability: akzeptable Antwortzeiten
+> * Partition Tolerance: Ausfalltoleranz bei Verlust von Nachrichten, Netzknoten, Partitionen
+
+## Topologien von Data Grids
+
+* Embedded: Für die Anwendung mit asynchroner Ausführung von Tasks, Nodes erhalten
+* Client/Server: Cluster von skalierbaren Server-Knoten mit Client-Kommunikation
+
+## In-Memory Data Grid (IMDG)
+
+* Daten in Memory des Knotens
+* Punkt-zu-Punkt.Verbindung (Sockets), kein Master-Slave-System
+* Redundanz: Daten auf verschiedenen Knoten
+* Skalierbarkeit: Nodes können während des Betriebs hinzugefügt oder entfernt werden
+* Persistenz: Speicherung der Daten in relationalen oder NoSQL-Datenbanken
+
+## Datenpartionierung
+
+	TODO
+
+

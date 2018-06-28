@@ -4,7 +4,9 @@ This is a conclusive guide on how to become a certified _Hackerman&trade;_ and c
 
 ## Introduction
 
-The term **hacker** is primarily used to describe [...] `//TODO`
+The term **hacker** is primarily used to describe [...] 
+
+    //TODO: Write Intro
 
 ## Color Coded Hats
 
@@ -16,15 +18,15 @@ Like the cowboys in the Old West, hackers use [color coded hats](https://en.wiki
 
 * A **gray hat** is someone who does not have the permission of the system owner but has no intent to exploit vulnerabilities but rather to make a system more secure by informing the owner.
 
-* A **green hat** is someone who uses his _hackerskillz_ primarily to frogpost on mongolian basket weave forums.
+* A **green hat** is someone who uses his _hackerskillz_ primarily to _frogpost_ on mongolian basket weave forums.
 
 Even though the motivation differs between the different hat colors, the tools, procedures and the required knowledge is generally the same.
 
 ## Vulnerabilities and Exploits
 
-The essence of hacking is the exploitation of security flaws in software components, devices and computer networks. These flaws are called **vulnerabilities**. Using these vulnerabilites to gain access to a system is called **exploitation** of those vulnerabilities.
+The essence of hacking is the exploitation of security flaws in software components, devices and computer networks. These flaws are called **vulnerabilities**. Using these vulnerabilities to gain access to a system is called **exploitation** of those vulnerabilities.
 
-### Vulnerabilites
+### Vulnerabilities
 
 No network or computer is 100% safe, because it has to be possible to access information on a system for it to be usable.
 
@@ -42,8 +44,8 @@ Since it is nearly impossible to anticipate every feasible vulnerability while w
 
 ### Exploits
 
-`//TODO`
+    //TODO: Exploits
 
 #### Access
 
-`//TODO`
+    //TODO: Exploits

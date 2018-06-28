@@ -327,6 +327,12 @@ yay powerline
 ```
 change ZSH_THEME to `geoffgarside` in `~/.zshrc`
 
+## VS Code
+
+```
+# ulimit -n 65536
+$ yay vscode
+```
 
 ## Docker
 

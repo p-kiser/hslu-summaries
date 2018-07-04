@@ -39,7 +39,7 @@ Redundazen in Tabellen können zu **Anomalien** führen. Ein Merkmal ist _redund
 
 ## Normalisierung
 
-Ziel: Analyse von Abhängigkeiten zur Vermeidung von Redundanz, denn diese führen zu Anomalien. 
+Ziel: Analyse von Abhängigkeiten zur Vermeidung von Redundanz, denn diese führen zu Anomalien.
 
 Arten von Mutationsanomalien:
 
@@ -67,4 +67,3 @@ Atomare Daten, **keine** Arrays, Mengen, Aufzählungen, Listen etc. als Merkmals
 
 | M# | Name | Ort | P# |
 |---|---|---|---|
-

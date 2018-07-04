@@ -6,7 +6,7 @@ Gestohlen vom [Pädi](https://github.com/patrickbucher/inf-stud-hslu/blob/master
 
 # Komponenten
 
-Eine Software-Komponente ist ein Teil einer Software, der gemäss den Regeln eines _Komponentenmodell_ zusammenwirken kann und ohne Änderungen mit anderen Komponenten verknüpft und ausgführt werden kann.
+Eine Software-Komponente ist ein Teil einer Software, der gemäss den Regeln eines _Komponentenmodell_ zusammenwirken kann und ohne Änderungen mit anderen Komponenten verknüpft und ausgeführt werden kann.
 
 Eine Komponente ist also ein Element einer komponentenbasieren Anwendung
 mit definierten Schnittstellen zur Verbindung mit anderen Komponenten.
@@ -17,7 +17,7 @@ Darstellung im UML:
 
 Komponentenmodelle definieren die strukturellen Anforderungen im Bezug auf die Verknüpfung von Komponenten und implementieren Mechanismen wie Verteilung, Persistenz, Nachrichtenaustausch und Versionierung.
 
-Komponentenmodelle legen die Eigenschaften und die Form einer Komponente fest sowie die Kommunikation zwischen Komoponenten  über Schnittstellen. Beispeile für Komponentenmodelle:
+Komponentenmodelle legen die Eigenschaften und die Form einer Komponente fest sowie die Kommunikation zwischen Komoponenten  über Schnittstellen. Beispiele für Komponentenmodelle:
 
 - Microsoft .NET
 - DCOM
@@ -31,13 +31,13 @@ Komponentenmodelle legen die Eigenschaften und die Form einer Komponente fest so
 * Verbesserte Wartbarkeit durch Kapselung
 * Parallele und verteilte Entwicklung möglich
 
-Aufgrund steigender Komplexität werden Eigenentwicklungen weniger wirtschaftlich und unsicherer. Software wird vermehrt aus bestehenden Komponenten konstruiert.
+Aufgrund steigender Komplexität werden Eigenentwicklungen weniger wirtschaftlich und unsicherer. Software wird vermehrt aus bestehenden Komponenten zusammengesetzt.
 
 Weil die Kommunikation nur über spezifizierte Schnittstellen erfolgt, muss man nur diese kennen, um eine Komponente einsetzen zu können. Komponenten mit gleichen Schnittstellen sich deshalb austauschbar.
 
 ## Schnittstellen
 
-Schnittstellen sind Verbindungsstellen, die sicherstellen das zwei Komponenten kombiniert werden können, indem sie Methodensignaturen vorgibt. Sie sollten aus wenigen Methoden mit wenigen Überschneidungen und wenigen Parametern bestehen. Ausserdem sollten sie gut dokumentiert und einfach verständlich sein.
+Schnittstellen sind Verbindungsstellen, die sicherstellen das zwei Komponenten kombiniert werden können, indem sie Methodensignaturen vorgeben. Sie sollten aus _wenigen Methoden_ mit _wenigen Überschneidungen_ und _wenigen Parametern_ bestehen. Ausserdem sollten sie gut dokumentiert und einfach verständlich sein.
 
 ## Modularisierung
 
@@ -347,7 +347,7 @@ Systemtests sollten in einer möglichst realitätsnahen Testumgebung ausgeführt
 
 Systemtest zum Testen nicht funktionaler Anforderungen wie Performance, Sicherheit, Robustheit
 
-## Regressionstests
+### Regressionstests
 
 Wiederholtes Ausführen bestehender Testfälle zur einem späteren Zeitpunkt, um sicherzustellen, dass keine Funkktionalität durch Neuentwicklungen beeinträchtigt wurde.
 
@@ -810,7 +810,7 @@ Darin werden die einzelnen Systemkonfigurationen zu verschiedenen Zeitpunkten id
 
 Konfigurationsmanagent ist eine Führungsaufgabe:
 
-* Indentifikation und Dokumentation der Eigenschaften jedes Configuration Items
+* Identifikation und Dokumentation der Eigenschaften jedes Configuration Items
 * Steuerung der nötigen Änderungen dieser Eigenschaften
 * Erfassung des Umsetzungsstandes von Änderungen
 * Überprüfung der Einhaltung festgelegter Anforderungen
@@ -1290,14 +1290,14 @@ Message Passing: Kommunikationsparadigma zum Versenden einer Nachricht von einem
 
 1. Nachrichtenübertragung:
 	* _zuverlässig_
-	* _unzuverlässig_ 
+	* _unzuverlässig_
 2. Übertragungsreihenfolge:
 	* _garantiert_
 	* _beliebig_
 3. Sender-Empfanger-Beziehung:
 	* _Unicast_: ein Sender, ein Empfänger
 	* _Multicast/Broadcast_: ein Sender, mehrere Empfänger
-	* _Client-Server_: mehrere Sender, ein Empfänger  
+	* _Client-Server_: mehrere Sender, ein Empfänger
 	* _All-to-all_: mehrere Sender, mehrere Empfänger
 4. Kommunikation:
 	* _synchron_: Sender blockiert, bis Empfänger die Nachricht entgegengenommen hat (Telefonie, Instant Messaging)
@@ -1344,7 +1344,6 @@ Nachricht A → B
 3. B bestätigt die Annahme der Nachricht _nach Abschluss der anderen Tätigkeit_.
 4. B verarbeitet die Nachricht
 
-
 #### Transient und synchron, antwortbasiert: RMI
 
 1. A sendet eine Nachricht und wartet auf eine Antwort
@@ -1383,10 +1382,10 @@ Solche Nachrichten sind Protokollen wie HTTP, RMI usw. vorzuziehen, wenn:
 **Fixe Protokolle**: Prarameter zu Beginn der Sitzung bekannt, keine Änderung während der Kommunikation
 
 **Adaptive Protokolle**: Parameter können während einer Sitzung ändern (Länge Argumentliste, Argumenttypen, Nachrichtentypen)
-	
+
 * Änderungen per anpassbarem _Message Handler_ zur Laufzeit
 * Kann mit dem _Prototyp-Design-Pattern_ umgesetzt werden: Neue Nachrichten nicht als Klassen, sondern als Erweiterung vom Prototyp-Objekt
-* Liste bekannter Nachrichtentypen wird zur Laufzeit erweitert 
+* Liste bekannter Nachrichtentypen wird zur Laufzeit erweitert
 
 # Verteilung & Kommunikation: RMI
 
@@ -1536,7 +1535,7 @@ public class RemoteSumImpl extends UnicastRemoteObject implements RemoteSum {
 }
 ```
 
-**Erzeugung der Registry**: 
+**Erzeugung der Registry**:
 
 ```java
 public class RegistrySetup {
@@ -1677,5 +1676,3 @@ Dadurch ist die schwache Uhrenbedingung (Erhaltung der Kausalität) gegeben.
 ## Datenpartionierung
 
 	TODO
-
-

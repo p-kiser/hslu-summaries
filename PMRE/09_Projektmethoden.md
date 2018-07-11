@@ -22,3 +22,13 @@ Vorteile einer Projektmethode:
 * **Konstruktivistisch / sequentiell**: das vollständige Produkt wird zu 100% freigeben am Ende des Entwicklungsprozesses (_alles 100%_)
 * **Inkrementell**: Einzelne, selbständige Teile des Produkts werden vollständig fertiggestellt und freigegeben und können unterschiedlich weit fortgeschritten sein (_Teil 1: 100%, Teil 3: 60%_)
 * **Evolutionär**: Ganzes Produkt wird auf tifem Funktions- oder Qualitätslevel fertiggestellt und freigeben. (_Alles 30%_) Anschliessend Weiterentwicklung (_alles 60%, 80%, 100%, 120%..._)
+
+## Projektziele
+
+**SMART**:
+
+* Specific
+* Measurable
+* Achievable
+* Relevant
+* Timely

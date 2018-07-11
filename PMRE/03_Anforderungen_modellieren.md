@@ -1,8 +1,8 @@
 # Anforderungen modellieren
 
-Modelle können **konkrete** (Modelleisenbahn) oder **abstrakte** (Atom-Modell, Finanzierungsmodell) Abbildungen realer Objekte sein. Der Verwendungszweck bestimmt, welches Modell geeignet ist.
+Modelle können _konkrete_ (Modelleisenbahn) oder _abstrakte_ (Atom-Modell, Finanzierungsmodell) Abbildungen realer Objekte sein. Der Verwendungszweck bestimmt, welches Modell geeignet ist.
 
-Modelle sind entweder **Stuktur-**, **Funktions-** oder **Verhaltens-** Analogie für ein Original.
+Modelle sind entweder _Stuktur-_, _Funktions-_ oder _Verhaltens-_ Analogie für ein Original.
 
 * **Struktur**: Relevante Objekte und ihre Beziehungen werden modelliert.
 (→ Datenmodell)

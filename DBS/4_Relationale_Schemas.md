@@ -1,6 +1,6 @@
 # Relationale Schemas
 
-## Relationemn
+## Relationen
 
 Unter einer _Tabelle_ oder _Relation_ verstehen wir eine _Menge von Tupeln_, die Tabellenförmig dargestellt werden und folgende Anforderungen erfüllen:
 

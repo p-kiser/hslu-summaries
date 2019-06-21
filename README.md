@@ -6,22 +6,22 @@ Meine Notizen zu verschiedenen HSLU-Modulen und aus der Lehre.
 
 | Kürzel       | Modulname                                     | Status     |
 | ------------ | --------------------------------------------- | ---------- |
-| AD           | Algorithmen & Datenstrukturen                 | Inexistent |
-| BW           | Betriebswirtschaft                            | Inexistent |
-| CAE          | Certificate of Advanced English               | Inexistent |
-| CNA          | Computer- und Network Architecture            | Inexistent |
-| CSA          | C# in Action                                  | Inexistent |
-| DBS          | Datenbanksysteme                              | Inexistent |
-| DMATH        | Diskrete Mathematik                           | Inexistent |
-| FKOM         | Fachkommunikation                             | Inexistent |
-| ISF          | Information Security Fundamentials            | Inexistent |
-| ITEO         | IT System Engineering & Operation             | Inexistent |
-| MANSEC       | Management Aspekte der Informationssicherheit | Existent   |
-| MATH         | Grundlagen Mathematik                         | Inexistent |
-| MOD          | Modellierung Grundlagen                       | Inexistent |
-| PLAB         | Programmierlabor                              | Inexistent |
-| PMB          | Projektmanagement Basics                      | Inexistent |
-| PMRE         | Projektmanagement & Requirement Engineering   | SW02       |
-| VSK          | Verteilte Systeme & Komponenten               | Inexistent |
-| WEBTEC       | Web Technologies                              | Inexistent |
-| SCHWEIZERPOL | Schweizer Politik                             | Inexistent |
+| AD           | Algorithmen & Datenstrukturen                 | - |
+| BW           | Betriebswirtschaft                            | ~ |
+| CAE          | Certificate of Advanced English               | - |
+| CNA          | Computer- und Network Architecture            | - |
+| CSA          | C# in Action                                  | - |
+| DBS          | Datenbanksysteme                              | - |
+| DMATH        | Diskrete Mathematik                           | - |
+| FKOM         | Fachkommunikation                             | - |
+| ISF          | Information Security Fundamentials            | - |
+| ITEO         | IT System Engineering & Operation             | - |
+| MANSEC       | Management Aspekte der Informationssicherheit | OK   |
+| MATH         | Grundlagen Mathematik                         | - |
+| MOD          | Modellierung Grundlagen                       | - |
+| PLAB         | Programmierlabor                              | ~ |
+| PMB          | Projektmanagement Basics                      | - |
+| PMRE         | Projektmanagement & Requirement Engineering   | ~ |
+| VSK          | Verteilte Systeme & Komponenten               | OK |
+| WEBTEC       | Web Technologies                              | - |
+| SCHWEIZERPOL | Schweizer Politik                             | ~ |

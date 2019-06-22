@@ -286,15 +286,25 @@ Strukturierte Methode zur Analyse von Assets, Risiken und Angriffen. Bildet die 
 5. **D** - Denial of Service
 6. **E** - Evation of Privilege
 
+Mitigations
+
+1. 2FA, password hashes
+2. Hashes, Autorisierung
+3. Signaturen, Timestamps
+4. Verschlüsselung, keine Secrets speichern
+5. Throttling, Filtern
+6. Container, Input Validation, root deaktivieren
+
+
 ## Risikobewertung (DREAD)
 
 Threat bewerten mit (3 - High, 2 - Medium,1 - Low)
 
-- Damage
-- Reproducibility (Immer, bestimmte Zeitfenster, schwer zu reproduzieren)
-- Exploitability
-- Affected users
-- Discoverability
+- **D** - Damage
+- **R** - Reproducibility (Immer, bestimmte Zeitfenster, schwer zu reproduzieren)
+- **E** - Exploitability
+- **A** - Affected users
+- **D** - Discoverability
 
 Probleme: qualitative, subjektive Analyse. Nicht quantifizierbar.
 
@@ -415,11 +425,11 @@ njection von JavaScript durch Ausnutzung von Vulnerabilities der Web Applikation
 
 ## Broken Access Control
 
-* **DAC** - Discretionary: USers can change access control rules (social media, file system) 
-* **MAC** - Mandatory: Users cannot change access control rules (unix root)
-* **RBAC** - Role Based: Permissions are given to roles (OS)
-* **ABAC** - Attribute Based: Decisions are made based upon proterties of subject and object
-* **Policy Based**:  Rules are external
+* **DAC** - *Discretionary*: Users can change access control rules (social media, file system) 
+* **MAC** - *Mandatory*: Users cannot change access control rules (unix root)
+* **RBAC** - *Role Based*: Permissions are given to roles (OS)
+* **ABAC** - *Attribute Based*: Decisions are made based upon proterties of subject and object
+* *Policy Based*:  Rules are external
 
 **Open Policy**: Permits acces unless explicit deny
 

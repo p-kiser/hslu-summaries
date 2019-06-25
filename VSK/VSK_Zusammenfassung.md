@@ -2,8 +2,6 @@
 
 Modul HSLU.I VSK (Verteilte Systeme und Komponenten)
 
-Gestohlen vom [Pädi](https://github.com/patrickbucher/inf-stud-hslu/blob/master/vsk/zusammenfassung/vsk.pdf) und aus den Folien VSK.
-
 Link zum Projekt (Source und Doku): https://github.com/patrickbucher/vsk-team5
 
 # Komponenten

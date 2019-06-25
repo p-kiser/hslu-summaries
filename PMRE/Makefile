@@ -3,9 +3,6 @@ FONTS=-V mainfont="IBM Plex Serif" -V sansfont="IBM Plex Sans" -V monofont="Fira
 DATE=-V date="`date +'%d.%m.%Y'`"
 
 src = $(wildcard *.md)
-pdfs = $(patsubst %.md,%.pdf,$(src))
 
-all: $(pdfs)
-
-%.pdf: %.md
-	pandoc -s $(PARAMS) $(FONTS) $(DATE) $< -o $@
+ZF_PMRE.pdf: $(src)
+	pandoc -s $(PARAMS) $(FONTS) $(DATE) $(src) -o ZF_PMRE.pdf

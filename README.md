@@ -1,3 +1,3 @@
 # Zusammenfassungen
 
-Zusammmenfassungen HSLU Informatik.
+Meine Notizen zu verschiedenen HSLU-Modulen.

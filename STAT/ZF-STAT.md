@@ -6,7 +6,7 @@ author: <pascal.kiser@stud.hslu.ch>
 
 # Allgemeines
 
-Zusammenfassung des Vorlesungsskripts FS19 zum Modul 'Statistics for Data Science' an der HSLU. Dieses Dokument beinhaltet den zusammengefassten Inhalt des Vorlesungsskripts für das FS 19, der Folien und Übungen.
+Zusammenfassung des Vorlesungsskripts FS19 zum Modul '_Statistics for Data Science_' an der HSLU. Dieses Dokument beinhaltet den zusammengefassten Inhalt des Vorlesungsskripts für das FS 19, der Folien und Übungen.
 
 ## Konventionen bei der Klammernotation
 
@@ -22,7 +22,7 @@ Der Wertebereich $(a,b]$ beinhaltet also alle Punkte $x > a$ und $x <= b$.
 Relevant für die Darstellung von Messwerten sind vor allen die _Nachkommastellen_ und die _signifikanten Stellen_. Als signifikante Stellen bezeichnet man alle Stellen von der ersten, sich von Null unterscheidenden Stelle bis zur Rundungstelle. Als Nachkommastellen bezeichet man die Stellen rechts des Kommas.
 
 | Zahl              | Signifikante Stellen  | Nachkommastellen  |
-|                ---:|                    ---:|                ---:|
+|               ---:|                   ---:|               ---:|
 | $23.45$           |                     4 |                 2 |
 | $0.0023$          |                     2 |                 2 |
 | $1.12 \cdot 10^6$ |                     3 |                 2 |
@@ -43,7 +43,7 @@ In der Naturwissenschaft möchte man ein physikalisches System mit _unvollständ
 
 > Die **Stochastik** (von lateinisch _ars conjectandi_, also ‚Kunst des Vermutens‘, ‚Ratekunst‘) ist ein Teilgebiet der Mathematik und fasst als Oberbegriff die Gebiete Wahrscheinlichkeitstheorie und Mathematische Statistik zusammen. Als stochastisch werden Ereignisse oder Ergebnisse bezeichnet, die bei Wiederholung desselben Vorgangs nur manchmal eintreten und deren Eintreten für den Einzelfall nicht vorhersagbar ist.
 
-$\rightarrow$ _https://de.wikipedia.org/wiki/Stochastik_
+_https://de.wikipedia.org/wiki/Stochastik_
 
 ## Beispiel Münzwurf
 

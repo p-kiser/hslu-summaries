@@ -309,13 +309,15 @@ for (int i = 0; i < 10; i++) {
 while(a) {
    //...
 }
+```
 
 ### do-while
+
 ```c
 do {
    //...
 } while (a);
-
+```
 ### goto
 
 ```c
@@ -352,7 +354,7 @@ printf("String: %s, Number: %d, Float: %3.2f\n", "Hello", 5, 99.9);
 * `size_t strlen(const char* str)` : Anzahl Zeichen in einer Zeichenkette
 * `char* strcpy(char* dest, const char* src)` : Zeichenkette kopieren
 * `char* strcat(dest, name)` : Zeichenkette verketten
-`
+
 ### Funktionen zur Dateiverwaltung
 
 TODO
